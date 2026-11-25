@@ -6,7 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy  # noqa: E402
 
-from studio import RENDERS, asset_meshes, clear, frame, render, reset, show_collisions  # noqa: E402
+from studio import RENDERS, asset_meshes, clear, frame, render, repaint, reset, show_collisions, veneer  # noqa: E402
 from grag.services.presets import window_layout_preset  # noqa: E402
 
 PRESETS = ('SINGLE_FIXED', 'DOUBLE_FIXED', 'DOUBLE_SASH', 'TRIPLE_FIXED', 'TRIPLE_SASH', 'FRENCH')
@@ -61,6 +61,9 @@ def french():
 
 def hero():
     root = window('TRIPLE_SASH', preview=.35)
+    # Window atlases lay the grain along V; the veneer image has it along U.
+    wood = veneer('WALNUT', rotate=True)
+    repaint(root, {'Window Frame': wood, 'Window Sill': wood})
     frame(asset_meshes(root), ROOM_SIDE, width=900, height=720)
     render('hero_window')
 

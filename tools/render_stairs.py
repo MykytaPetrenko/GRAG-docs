@@ -6,7 +6,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy  # noqa: E402
 
-from studio import asset_meshes, clear, frame, ghost_material, render, reset, show_collisions  # noqa: E402
+from studio import (asset_meshes, clear, concrete, frame, ghost_material, marble, render, repaint,  # noqa: E402
+                    reset, show_collisions, veneer)
 from grag.services.presets import builtin_preset  # noqa: E402
 
 PRESETS = ('Straight Concrete Stairs', 'L-Turn with Timber Balusters', 'U-Turn with Tubular Railing',
@@ -69,6 +70,7 @@ def mounting():
 def finish():
     for name, value in (('original', 'ORIGINAL'), ('plates', 'PLATES')):
         root = stairs(step_count=5, width=1.0, tread_finish=value, use_top_bevel=True, use_bottom_bevel=True)
+        repaint(root, {'Concrete': concrete(), 'Tread Finish': marble()})
         frame(asset_meshes(root), (1.6, .9, .8), lens=70, width=800, height=600)
         render(f'stairs_finish_{name}')
 
@@ -82,9 +84,15 @@ def collisions():
 
 
 def hero():
-    root = stairs('L-Turn with Timber Balusters')
+    """The L-turn with marble tread plates on a concrete body and walnut handrails."""
+    root = stairs('L-Turn with Timber Balusters', tread_finish='PLATES')
+    # Stair atlases lay the grain along V; the veneer image has it along U.
+    repaint(root, {'Concrete': concrete(), 'Tread Finish': marble(), 'Timber Handrail': veneer('WALNUT', rotate=True)})
     frame(asset_meshes(root), VIEW, width=900, height=900)
     render('hero_stairs')
+    # The same stairs from the other side, for the texturing page.
+    frame(asset_meshes(root), (-1.1, 1.5, 1.2), width=900, height=900)
+    render('stairs_ready')
 
 
 reset()

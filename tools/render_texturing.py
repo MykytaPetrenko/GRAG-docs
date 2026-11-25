@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy  # noqa: E402
 
-from studio import RENDERS, asset_meshes, clear, frame, render, reset  # noqa: E402
+from studio import RENDERS, asset_meshes, clear, frame, render, repaint, reset, veneer  # noqa: E402
 
 ROOM_SIDE = (.9, 2.4, .55)
 
@@ -61,6 +61,18 @@ def checker():
     render('door_uv_grid')
 
 
+def veneered():
+    """The draft atlas as it comes out of Rebuild, with a wood veneer and nothing else done."""
+    root = door('CLASSIC_THREE', one_material=False, texture_grain='HORIZONTAL')
+    repaint(root, {'Warm Wood': veneer('ANGLI')})
+    frame(asset_meshes(root), ROOM_SIDE, width=560, height=900)
+    render('door_veneer')
+    # Close to the handle, where the rails, stiles and panels each show their grain.
+    grips = [obj for obj in asset_meshes(root) if obj.get('grag_part') == 'grips']
+    frame(grips, (.9, 2.4, .3), lens=70, margin=6, width=800, height=800)
+    render('door_veneer_close')
+
+
 def painter():
     """The high bake file: each source material in its ID colour, bake groups moved apart."""
     root = door('SLATS', handle_finish='BLACK', long_backplate=True, one_material=False)
@@ -84,6 +96,6 @@ def painter():
 
 
 reset()
-JOBS = {'checker': checker, 'painter': painter}
+JOBS = {'checker': checker, 'veneer': veneered, 'painter': painter}
 for job in (sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else JOBS):
     JOBS[job]()

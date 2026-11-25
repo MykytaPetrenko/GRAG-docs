@@ -201,6 +201,12 @@ def texturing_atlas():
     save(image, 'texturing-atlas')
 
 
+def texturing_ready():
+    """The draft atlas with a wood veneer, straight out of Rebuild."""
+    grid('texturing-ready', [render('door_veneer'), render('door_veneer_close', trim=False),
+                              render('stairs_ready')], 3, (440, 600), gap=30)
+
+
 def painter_bake():
     grid('painter-bake', [render('door_painter_high')], 1, (1400, 620))
 
@@ -209,7 +215,7 @@ FIGURES = {'window-collision-detail': window_collision_detail, 'door-styles': do
            'door-handles': door_handles, 'door-layouts': door_layouts, 'window-presets': window_presets,
            'stairs-presets': stairs_presets, 'stairs-finish': stairs_finish, 'stairs-collisions': stairs_collisions,
            'railing-types': railing_types, 'railing-mounting': railing_mounting, 'hero': hero,
-           'texturing-atlas': texturing_atlas, 'painter-bake': painter_bake}
+           'texturing-atlas': texturing_atlas, 'painter-bake': painter_bake, 'texturing-ready': texturing_ready}
 
 if __name__ == '__main__':
     for name in sys.argv[1:] or FIGURES:

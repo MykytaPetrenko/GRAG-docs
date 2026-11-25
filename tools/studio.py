@@ -8,6 +8,7 @@ Renders have a transparent background; `compose.py` puts them on the page colour
 """
 
 from math import atan, radians, sin
+import os
 from pathlib import Path
 import sys
 
@@ -19,6 +20,14 @@ DOCS = Path(__file__).resolve().parents[1]
 GRAG = DOCS.parent / 'GRAG'
 BUILDER = DOCS.parent / 'BlenderBuilder'
 RENDERS = DOCS / 'tools' / '_renders'
+# Texture library for the textured figures: wood veneers and the tile set.
+TEXTURES = Path(os.environ.get('GRAG_DOCS_TEXTURES', 'E:/GameDev/KinX-Dev/textures'))
+# Stone and concrete for the stairs, from a second library.
+PROCESSED = Path(os.environ.get('GRAG_DOCS_PROCESSED', 'E:/GameDev/Modular Assets/Textures/Processed'))
+ANGLI = TEXTURES / 'Veneers' / 'angli_veneer_2k' / 'textures' / 'angli_veneer_{}_2k.png'
+WALNUT = TEXTURES / 'Veneers' / 'black_walnut_veneer_02_2k' / 'textures' / 'black_walnut_veneer_02_{}_2k.png'
+MARBLE = TEXTURES / 'goldenblack_2-4K' / 'goldenblack_2-4K' / 'goldenblack_2_{}-4K.png'
+CONCRETE = PROCESSED / 'grave_concrete_03' / 'gravel_concrete_03_{}.png'
 sys.path[:0] = [str(GRAG)]
 
 import grag  # noqa: E402
@@ -245,6 +254,92 @@ def _collision_materials(kind):
         output = nodes.new('ShaderNodeOutputMaterial')
         edge.node_tree.links.new(emission.outputs[0], output.inputs[0])
     return fill, edge
+
+
+
+def textured_material(name, color, roughness=None, normal=None, arm=None, rotate=False, scale=(1, 1),
+                      normal_strength=.6):
+    """A material that reads its maps, given as file paths, from the draft atlas in UVMap.
+
+    `arm` is a packed map with roughness in green, used when there is no roughness map.
+    `rotate` turns the image a quarter turn, for wood whose grain runs along U on an
+    atlas that lays grain along V. `scale` repeats the image along U and V.
+    """
+    material = bpy.data.materials.get(name)
+    if material is not None:
+        return material
+    material = bpy.data.materials.new(name)
+    material.use_nodes = True
+    tree = material.node_tree
+    nodes, links = tree.nodes, tree.links
+    shader = nodes['Principled BSDF']
+    coordinates = nodes.new('ShaderNodeUVMap')
+    coordinates.uv_map = 'UVMap'
+    mapping = nodes.new('ShaderNodeMapping')
+    mapping.inputs['Scale'].default_value = (*scale, 1)
+    mapping.inputs['Rotation'].default_value = (0, 0, radians(90) if rotate else 0)
+    links.new(coordinates.outputs[0], mapping.inputs[0])
+
+    def image(path, data):
+        node = nodes.new('ShaderNodeTexImage')
+        node.image = bpy.data.images.load(str(path), check_existing=True)
+        if data:
+            node.image.colorspace_settings.name = 'Non-Color'
+        links.new(mapping.outputs[0], node.inputs[0])
+        return node
+
+    links.new(image(color, False).outputs[0], shader.inputs['Base Color'])
+    if roughness:
+        links.new(image(roughness, True).outputs[0], shader.inputs['Roughness'])
+    elif arm:
+        channels = nodes.new('ShaderNodeSeparateColor')
+        links.new(image(arm, True).outputs[0], channels.inputs[0])
+        links.new(channels.outputs['Green'], shader.inputs['Roughness'])
+    if normal:
+        normal_map = nodes.new('ShaderNodeNormalMap')
+        normal_map.uv_map = 'UVMap'
+        normal_map.inputs['Strength'].default_value = normal_strength
+        links.new(image(normal, True).outputs[0], normal_map.inputs['Color'])
+        links.new(normal_map.outputs[0], shader.inputs['Normal'])
+    return material
+
+
+def repaint(root, replacements, parts=None):
+    """Put textured materials on an asset's meshes, by the name of the material they replace.
+
+    `parts` limits the change to meshes with these grag_part names.
+    """
+    for obj in [root, *root.children_recursive]:
+        if obj.type != 'MESH' or obj.get('grag_collision'):
+            continue
+        if parts is not None and obj.get('grag_part') not in parts:
+            continue
+        for slot in obj.material_slots:
+            for key, material in replacements.items():
+                if slot.material and key in slot.material.name:
+                    slot.link = 'OBJECT'
+                    slot.material = material
+                    break
+
+
+def veneer(wood='ANGLI', rotate=False):
+    pattern = str(ANGLI if wood == 'ANGLI' else WALNUT)
+    return textured_material(f'Docs Veneer {wood} {rotate}', pattern.format('diff'), pattern.format('rough'),
+                             pattern.format('nor_gl'), rotate=rotate)
+
+
+def marble():
+    """Black and gold marble for tread plates; the image is twice as wide as tall, so U shows half of it."""
+    pattern = str(MARBLE)
+    return textured_material('Docs Marble', pattern.format('basecolor'), pattern.format('roughness'),
+                             pattern.format('normal'), scale=(.5, 1), normal_strength=.3)
+
+
+def concrete():
+    """Concrete with the equalized colour map, repeated so its grain keeps a believable size on a stair atlas."""
+    pattern = str(CONCRETE)
+    return textured_material('Docs Concrete', pattern.format('diff_2k_equalized'), normal=pattern.format('nor_gl_2k'),
+                             arm=pattern.format('arm_2k'), scale=(3, 3), normal_strength=.5)
 
 
 DEG = radians

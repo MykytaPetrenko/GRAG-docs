@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy  # noqa: E402
 
-from studio import asset_meshes, clear, frame, render, reset, show_collisions  # noqa: E402
+from studio import asset_meshes, clear, frame, render, repaint, reset, show_collisions, veneer  # noqa: E402
 
 STYLES = ('FLUSH', 'SLATS', 'STEEL', 'REFERENCE', 'ROUNDED_FOUR', 'CLASSIC_THREE', 'MODERN_TWO')
 HANDLES = ('SQUARE', 'KNOB', 'TUBE', 'REFERENCE', 'SWEPT', 'BLADE', 'TURNED', 'WAVE')
@@ -57,7 +57,9 @@ def layouts():
 
 
 def hero():
-    root = door(style='CLASSIC_THREE', swing=radians(28))
+    # The veneer's grain runs along U, so the atlas lays the grain along U as well.
+    root = door(style='CLASSIC_THREE', swing=radians(28), texture_grain='HORIZONTAL')
+    repaint(root, {'Warm Wood': veneer('ANGLI')})
     frame(asset_meshes(root), ROOM_SIDE, width=560, height=900)
     render('hero_door')
 

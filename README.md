@@ -26,3 +26,5 @@ Images and GIFs in `docs/images` are made from the GRAG source in the sibling `G
 | `tools/make_gifs.py` | GIFs from the captured frames |
 
 Intermediate files go to `tools/_renders`, which is not committed.
+
+The textured figures read their maps from two local texture libraries. `GRAG_DOCS_TEXTURES` holds `Veneers/angli_veneer_2k`, `Veneers/black_walnut_veneer_02_2k` and `goldenblack_2-4K`; `GRAG_DOCS_PROCESSED` holds `grave_concrete_03`.
