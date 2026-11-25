@@ -2,11 +2,13 @@
 
 ## Creating doors
 
-1. Choose the **Door Style**: **Flush Wood**, **Horizontal Slats**, **Steel Panel**, **Original Four-Panel** (the leaf from `door.blend`, fitted to the opening), **Rounded Four-Panel**, **Classic Three-Panel** or **Modern Two-Panel**. Then choose the handle and hinge side.
+1. Choose the **Door Style**, then the handle and hinge side. **Original Four-Panel** is the leaf from `door.blend`, fitted to the opening.
 2. For a standalone door, set the rough opening in **Opening and Walls** and press **Build at Cursor**. The cursor marks the centre of the opening at floor level.
 3. To place a door in a Room Builder plan, select a door opening in **Rooms → Openings** and press **Build in Room Opening**. The door takes the width, height, position, angle, finished floor level and the wall depth on both sides. After the plan changes, select the door and press **Sync to Room Opening**.
 
 Built-in presets: **Interior Flush Door**, **Classic Four-Panel Door**, **Steel Utility Door** and **Glazed Double Entrance**.
+
+![The seven door styles.](images/door-styles.webp)
 
 ## Parameters
 
@@ -14,7 +16,11 @@ Built-in presets: **Interior Flush Door**, **Classic Four-Panel Door**, **Steel 
 
 **Frame and Leaf.** **Jamb Width**, **Casing Thickness**, **Leaf Thickness** and **Jamb Clearance** shape the frame and leaf. When the profile leaves room behind the leaf, the jamb and the dividers get a stop rebate. **Horizontal Slats** use **Slats** and **Slat Gap**. In the panelled styles, **Original Four-Panel** and **Steel Panel** mark the profile breaks as sharp; **Rounded Four-Panel** rounds the panel corners with **Panel Corner Radius** and **Panel Corner Segments**, sharp along the profile outlines and smooth across the arcs; **Classic Three-Panel** has smooth profile transitions set by **Bevel Width** and **Bevel Segments**; **Modern Two-Panel** has a tall upper and a shorter lower panel.
 
-**Hardware.** **Handle Style** offers **Square Lever**, **Round Knob**, **Return Lever**, **Original Lever** (the lever and plate from `door.blend`), **Swept Lever**, **Blade Lever**, **Turned Lever**, **Wave Lever** and **None**. **Long Backplate** extends the mounting plate in the handle's style and adds a lock; **Lock Style** is **Key / Key**, **Key / Thumbturn** or **Privacy**, which has a thumbturn on one side and a slot for a flat screwdriver on the other. **Thumbturn Side** chooses the thumbturn's side. **Handle Height**, **Hardware Finish** and **Hinges** complete the hardware.
+![The handle styles. Swept and Turned Lever are shown with Long Backplate.](images/door-handles.webp)
+
+**Hardware.** **Handle Style** offers the eight handles above, or **None**; **Original Lever** is the lever and plate from `door.blend`. **Long Backplate** extends the mounting plate in the handle's style and adds a lock; **Lock Style** is **Key / Key**, **Key / Thumbturn** or **Privacy**, which has a thumbturn on one side and a slot for a flat screwdriver on the other. **Thumbturn Side** chooses the thumbturn's side. **Handle Height**, **Hardware Finish** and **Hinges** complete the hardware.
+
+![A single leaf, a double leaf, and a door with glazed and solid side sections under a glazed transom.](images/door-layouts.webp)
 
 **Opening Layout.** **Double Leaf** adds a second leaf; **Secondary Bay Width** is its share of the door bay after the frame and gaps. Each leaf has its own pivot and **Swing** angle, a preview only. **Secondary Handle** adds a handle to the second leaf; by default it is passive and carries the strike plate for the main leaf's latch. **Left Section**, **Right Section** and **Transom** can be **Solid** panels or **Glazed** frames. Side section widths come out of the opening width: a 2 m opening with two 0.5 m sections leaves a 1 m door bay. The transom spans the whole width and its height comes out of the opening height. **Divider Width** and **Divider Depth** size the dividers. Each glazed section has its own **Glass Frame Width**; **Left Bottom Offset** and **Right Bottom Offset** raise the glass and fill the bottom with a solid panel; **Transom Columns** splits the transom into equal parts. Each section is **Simple** (a plain panel or glazed frame) or **Match Door**, which aligns slat joints, panels and recesses with the main leaf. A solid transom has vertical slats, as many as its width fits at the leaf's slat spacing; a panelled one has one row of rectangular panels.
 
@@ -37,6 +43,9 @@ The generator marks seams on the diagonal joints of the frame, casings and glass
 Doors have no helper geometry for ambient occlusion.
 
 ## Collisions
+
+![The leaf box turns with the leaf, while the frame boxes stay; the gap around the leaf stays open.](images/door-collision-swing.gif)
+
 
 | Part | Switch | Shapes |
 | --- | --- | --- |

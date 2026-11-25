@@ -7,11 +7,12 @@ Run the media scripts with Blender 5.2 in background mode, for example:
 Renders have a transparent background; `compose.py` puts them on the page colour.
 """
 
-from math import radians
+from math import atan, radians, sin
 from pathlib import Path
 import sys
 
 import bpy
+from bpy_extras.object_utils import world_to_camera_view
 from mathutils import Vector
 
 DOCS = Path(__file__).resolve().parents[1]
@@ -104,9 +105,54 @@ def camera(location, target, lens=50, ortho_scale=None):
     return obj
 
 
-def render(name, width=900, height=900):
+def bounds(objects):
+    points = [obj.matrix_world @ Vector(corner) for obj in objects for corner in obj.bound_box]
+    return (Vector([min(p[i] for p in points) for i in range(3)]),
+            Vector([max(p[i] for p in points) for i in range(3)]))
+
+
+def asset_meshes(root, collisions=False):
+    objects = [root, *root.children_recursive]
+    return [obj for obj in objects if obj.type == 'MESH' and not obj.hide_render
+            and (collisions or not obj.get('grag_collision'))]
+
+
+def frame(objects, direction=(1, 2.2, .9), lens=60, margin=1.08, width=900, height=900, target_offset=(0, 0, 0)):
+    """A camera looking along -direction whose view fits the objects' bounding boxes with a small margin."""
     scene = bpy.context.scene
     scene.render.resolution_x, scene.render.resolution_y = width, height
+    corners = [obj.matrix_world @ Vector(corner) for obj in objects for corner in obj.bound_box]
+    low, high = bounds(objects)
+    center = (low + high) / 2 + Vector(target_offset)
+    direction = Vector(direction).normalized()
+    distance = (high - low).length * 2
+    obj = camera(center + direction * distance, center, lens=lens)
+    for _ in range(6):
+        bpy.context.view_layer.update()
+        points = [world_to_camera_view(scene, obj, corner) for corner in corners]
+        # Distance from the frame centre, as a share of the half frame on each axis.
+        extent = max(max(abs(point.x - .5), abs(point.y - .5)) for point in points) * 2
+        distance *= extent * margin
+        obj.location = center + direction * distance
+    return obj
+
+
+def clear():
+    """Remove every object except lights, keeping GRAG registered."""
+    for obj in list(bpy.data.objects):
+        if obj.type != 'LIGHT':
+            bpy.data.objects.remove(obj, do_unlink=True)
+    for collection in list(bpy.data.collections):
+        bpy.data.collections.remove(collection)
+    for mesh in list(bpy.data.meshes):
+        if mesh.users == 0:
+            bpy.data.meshes.remove(mesh)
+
+
+def render(name, width=None, height=None):
+    scene = bpy.context.scene
+    if width:
+        scene.render.resolution_x, scene.render.resolution_y = width, height or width
     scene.render.resolution_percentage = 100
     RENDERS.mkdir(parents=True, exist_ok=True)
     scene.render.filepath = str(RENDERS / f'{name}.png')
@@ -121,8 +167,8 @@ def deselect():
         obj.select_set(False)
 
 
-# Collision colours by the engine body a shape belongs to.
-BODY_COLORS = {'': (.12, .75, .3), 'leaf': (.95, .62, .12), 'sash': (.95, .62, .12), 'glass': (.2, .6, 1.0)}
+# Collision colours by the engine body a shape belongs to: fixed, moving, separate glass.
+BODY_COLORS = {'': (.05, .85, .2), 'leaf': (1.0, .45, .02), 'sash': (1.0, .45, .02), 'glass': (.02, .45, 1.0)}
 
 
 def _body_kind(obj):
@@ -134,10 +180,11 @@ def _body_kind(obj):
     return ''
 
 
-def show_collisions(root, settings, visible=True, visuals=True):
-    """Collision shapes render as translucent volumes with bright edges, coloured by their engine body."""
+def show_collisions(root, settings, visible=True, ghost=True):
+    """Collision shapes as bold coloured solids, and the asset as a faint ghost around them."""
     settings.show_collisions = visible
-    settings.show_visuals = visuals
+    settings.show_visuals = True
+    ghost_shader = ghost_material()
     for obj in root.children_recursive:
         if obj.type == 'MESH' and obj.get('grag_collision'):
             obj.hide_render = not visible
@@ -147,12 +194,30 @@ def show_collisions(root, settings, visible=True, visuals=True):
             obj.data.materials.append(edge)
             if not any(modifier.type == 'WIREFRAME' for modifier in obj.modifiers):
                 wire = obj.modifiers.new('Wire', 'WIREFRAME')
-                wire.thickness = .008
+                wire.thickness = .006
                 wire.use_replace = False
                 wire.material_offset = 1
-    for obj in [root, *root.children_recursive] if root.type == 'MESH' else root.children_recursive:
-        if obj.type == 'MESH' and not obj.get('grag_collision'):
-            obj.hide_render = not visuals
+    if ghost:
+        for obj in [root, *root.children_recursive] if root.type == 'MESH' else root.children_recursive:
+            if obj.type == 'MESH' and not obj.get('grag_collision'):
+                obj['docs_materials'] = [slot.material.name if slot.material else '' for slot in obj.material_slots]
+                for slot in obj.material_slots:
+                    slot.link = 'OBJECT'
+                    slot.material = ghost_shader
+
+
+def ghost_material():
+    material = bpy.data.materials.get('Docs Ghost')
+    if material is None:
+        material = bpy.data.materials.new('Docs Ghost')
+        material.use_nodes = True
+        material.surface_render_method = 'BLENDED'
+        material.use_backface_culling = True
+        shader = material.node_tree.nodes['Principled BSDF']
+        shader.inputs['Base Color'].default_value = (.8, .8, .8, 1)
+        shader.inputs['Alpha'].default_value = .16
+        shader.inputs['Roughness'].default_value = .8
+    return material
 
 
 def _collision_materials(kind):
@@ -165,9 +230,9 @@ def _collision_materials(kind):
         shader = fill.node_tree.nodes['Principled BSDF']
         shader.inputs['Base Color'].default_value = (*color, 1)
         shader.inputs['Emission Color'].default_value = (*color, 1)
-        shader.inputs['Emission Strength'].default_value = .35
-        shader.inputs['Alpha'].default_value = .3
-        shader.inputs['Roughness'].default_value = .6
+        shader.inputs['Emission Strength'].default_value = .25
+        shader.inputs['Alpha'].default_value = .8
+        shader.inputs['Roughness'].default_value = .5
     edge = bpy.data.materials.get(f'Docs Collision Edge {kind}')
     if edge is None:
         edge = bpy.data.materials.new(f'Docs Collision Edge {kind}')
@@ -175,8 +240,8 @@ def _collision_materials(kind):
         nodes = edge.node_tree.nodes
         nodes.clear()
         emission = nodes.new('ShaderNodeEmission')
-        emission.inputs['Color'].default_value = (*(min(1, value * 1.3) for value in color), 1)
-        emission.inputs['Strength'].default_value = 1.4
+        emission.inputs['Color'].default_value = (*(value * .35 for value in color), 1)
+        emission.inputs['Strength'].default_value = 1.0
         output = nodes.new('ShaderNodeOutputMaterial')
         edge.node_tree.links.new(emission.outputs[0], output.inputs[0])
     return fill, edge

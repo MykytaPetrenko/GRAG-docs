@@ -6,6 +6,8 @@ Press **Build at Cursor**. New stairs appear at the 3D cursor. Select the stair 
 
 The stair body is the root object and one connected, closed mesh. Railing parts are child meshes, grouped by role (handrail, infill rails, posts, supports, couplings, corner connectors, wall brackets); user-added children are kept. **Merge** joins the stair body and tread plates into one mesh and all railing parts into another, with one slot per shared material.
 
+![The four built-in presets.](images/stairs-presets.webp)
+
 ## Parameters
 
 **Steps and Slab.**
@@ -27,6 +29,8 @@ The stair body is the root object and one connected, closed mesh. Railing parts 
 **Reinforcement.** **Side Ribs** adds ribs below both side edges, with **Rib Width** inward from the side and **Rib Z Offset** downward. **Cut Top** continues the rib edge loops through the top polygons; without it only the rib corner stays inset.
 
 **Tread Finish and Bevels.**
+
+![Original Bevel with upper and lower bevels, and Tread Plates.](images/stairs-finish.webp)
 
 - **Original Bevel** keeps the structural mesh with **Upper Bevel**, which rounds the tread noses, and **Lower Bevel**, which rounds the tread/riser junctions except at the first step of each flight. Each has its own **Width**, **Segments** and **Profile**. Widths are clamped so bevels never overlap; one segment is a chamfer and profile 0.5 a circular section.
 - **Additional Tiles / Plates** makes a **Tread Plates** child with separate solid plates for treads and landings. **Plate Thickness** is recessed into the structure, so finished levels, total rise, riser spacing, the underside and railing bases stay the same; it must be smaller than the riser and slab height.
@@ -59,6 +63,9 @@ All modules form one connected, closed shell with no internal caps between steps
 Every rebuild unwraps the stair body, tread plates and railings, one atlas per material or one with **One Material**. The stair generator marks no seams of its own: the islands come from projection, and curved railing parts are unwrapped along them. Preview walls get no atlas.
 
 ## Collisions
+
+![The collisions of the U-turn preset with the flight following the steps, and as a ramp.](images/stairs-collisions.webp)
+
 
 | Switch | Shapes |
 | --- | --- |

@@ -2,7 +2,7 @@
 
 GRAG, the Game Ready Assets Generator, is a Blender extension that builds doors, windows and stairs for games. Every asset is parametric: change a setting in its panel and the asset rebuilds at once, with clean topology, sharp edges, UV seams, collision shapes and moving parts ready for the engine.
 
-![Stairs rebuilding as their settings change in the panel.](images/stairs-rebuild.gif)
+![A door, a window and stairs made with GRAG.](images/hero.webp)
 
 ## What you get
 

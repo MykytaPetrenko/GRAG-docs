@@ -5,6 +5,9 @@ GRAG Documentation
 
 GRAG generates game-ready doors, windows and stairs in Blender, with collisions, UVs and exports for Godot and Substance 3D Painter.
 
+.. image:: images/hero.webp
+   :alt: A door, a window and stairs made with GRAG.
+
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
