@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Sphinx documentation
+docs/_build/
+
+# Intermediate renders and captures; the finished media is in docs/images
+tools/_renders/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

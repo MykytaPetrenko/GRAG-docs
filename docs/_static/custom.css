@@ -1,0 +1,8 @@
+.wy-nav-content {
+    max-width: 75% !important;
+}
+
+/* Figures sit on the same dark page colour as the media. */
+.rst-content img, article img {
+    border-radius: 4px;
+}
