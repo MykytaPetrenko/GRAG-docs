@@ -7,10 +7,14 @@ The **Texturing and Baking** section is the same in every panel:
 - **Prepare Draft UVs** unwraps the current meshes again, keeping their geometry and hand edits. Use it after editing a mesh or changing material assignments.
 - **Export for Substance Painter**.
 
-Every **Rebuild** unwraps a draft atlas into the `UVMap` layer. The generator marks seams where it knows them, for example on mitred joints and profiled frames, and the grain direction of wooden parts; a shared UV service unwraps the faces of each texture set, scales the islands evenly, turns wood grain along the chosen texture axis and packs the atlas. Faces without generator seams get their islands by projection. Glass and window reveals keep tiled UVs and stay out of the atlas. Other UV layers, such as an authored one, are kept. Refine the unwrap by hand after the last rebuild or draft.
+Every **Rebuild** unwraps a draft atlas into the `UVMap` layer. The generator marks seams where it knows them, for example on mitred joints and profiled frames, and the grain direction of wooden parts; a shared UV service unwraps the faces of each texture set, scales the islands evenly, turns wood grain along the chosen texture axis and packs the atlas. Faces without generator seams get their islands by projection. Glass and window reveals keep tiled UVs and stay out of the atlas. Other UV layers, such as an authored one, are kept. Islands are never mirrored, and they are turned upright: world up points up the texture on vertical faces, and the climbing direction of stairs on horizontal ones, so lettering and directional patterns read the right way. Islands aligned with the wood grain only turn half a turn, so the grain keeps its axis. Refine the unwrap by hand after the last rebuild or draft.
 
 
 ![A door with a checker on its draft atlas, and the atlas. Every part has the same texel density.](images/texturing-atlas.webp)
+
+The draft atlas is ready to use as it is: put a texture on the material and every part shows it at the same scale, with the grain along each part and nothing upside down.
+
+![The draft atlases with wood veneer, marble and concrete, straight after Rebuild, with no UV editing.](images/texturing-ready.webp)
 
 **Export for Substance Painter** writes `<name>_low.obj` to paint and `<name>_high.obj` to bake Material ID and ambient occlusion, each with its `.mtl`. Both files hold the same meshes with `_low` and `_high` suffixes, so Painter can match them by mesh name. In the low file each material is a texture set, or there is one with **One Material**. In the high file each source material has its own colour for the ID map. The export uses the closed pose. Parts in different bake groups are moved apart along X by 0.5 m so they do not occlude each other, and helper geometry that only adds ambient occlusion is in the high file only. In Painter:
 
