@@ -1,5 +1,8 @@
 # Stair Railings
 
+
+![The four railing types on the landing of a U-turn.](images/railing-types.webp)
+
 The **Railing System** section of the **Stairs Generator** panel builds four types of railing. This page describes each of them; the [Stairs](stairs.md) page covers the stairs themselves.
 
 Turn on **Enable Railing**, choose the **Type** and the mounting of each side. The railing follows the flights and the inner and outer landing routes, including 90° and 180° turns in either direction. On 90° turns with a wide **Flight Gap**, the inner route follows the exposed edges of the landing at **Edge Inset**; the handrail, infill rails and landing posts share that route. Overhanging landing routes first level out from the flight slope, then turn in plan; the outgoing route levels with the next flight before it climbs, so slope and direction never change at the same fitting.
@@ -7,6 +10,9 @@ Turn on **Enable Railing**, choose the **Type** and the mounting of each side. T
 Terminology: the **handrail** is the upper member you hold; the **railing system** is the whole assembly. The thin rails below it are **infill rails**, the uprights are **posts**, their thin top connections are **handrail supports**, and the sleeves at elbows are **coupling sleeves**. Each type keeps its own section dimensions when you switch between types, and selecting any railing part opens its stairs in the panel.
 
 ## Mounting and coverage
+
+![Flight-mounted railings on both sides, and a wall-mounted outer handrail with its preview wall.](images/railing-mounting.webp)
+
 
 Each side, **Inner** and **Outer**, has its own mounting and **Include Landings** switch. Inner and outer follow **Turn Direction**; the panel also shows which side is left or right.
 

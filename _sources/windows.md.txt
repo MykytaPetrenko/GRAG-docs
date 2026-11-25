@@ -6,14 +6,7 @@
 2. Choose a layout from the **Window Presets** menu, then adjust the number of sections, their hinges and their width ratios. Hinge sides are seen from outside.
 3. To preview an open pose, set **Preview Opening**. After the opening changes, press **Sync to Opening**.
 
-| Preset | Sections from left to right, seen from outside |
-| --- | --- |
-| **Single Fixed Pane** | One fixed pane |
-| **Two Fixed Panes** | Two fixed panes |
-| **Two Panes, Right Sash** | A fixed pane and a right sash |
-| **Three Fixed Panes** | Three fixed panes |
-| **Three Panes, Center Sash** | Fixed pane, centre sash, fixed pane |
-| **French Pair, No Fixed Post** | Two sashes hinged on the outer edges; the right one carries a meeting stile over the centre joint |
+![The six layout presets, seen from the room.](images/window-presets.webp)
 
 ## Parameters
 
@@ -31,6 +24,8 @@
 | Reveals (`Slopes`) | Left, right and top reveals form one mesh with shared vertices at the top corners. They meet the opening edges exactly on the inner wall face and angle toward the frame. There is no bottom reveal. |
 | Sill (`Windowsill`) | Its bottom lies exactly on the opening's bottom plane, `Z = 0` in asset space. It meets the frame and may project into the room; its bevel keeps a flat bearing. |
 | Sash (`SashNN…`) | Two hinges share one axis; the sash origin is at the centre of the lower hinge pin. Pins and fixed hinge plates belong to `FrameHinges`; moving hinge halves and the handle belong to the sash hardware. |
+
+![Preview Opening on a French pair: the left sash opens first, then the sash with the meeting stile.](images/window-french.gif)
 
 In a French pair the left sash opens first and the right one, with the meeting stile, second; they close in reverse. The generator checks that the chosen angle lets the meeting stile pass the open left sash, and **Preview Opening** shows the sequence. [Meeting stile in Liniar French windows](https://www.liniar.co.uk/upvc-windows/french) The handles and hinges are smooth on rounded surfaces and sharp at hard joints.
 

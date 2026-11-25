@@ -134,6 +134,7 @@
 <h2>Creating stairs<a class="headerlink" href="#creating-stairs" title="Link to this heading">¶</a></h2>
 <p>Press <strong>Build at Cursor</strong>. New stairs appear at the 3D cursor. Select the stair mesh or any generated railing part to edit the stairs. Built-in presets: <strong>Straight Concrete Stairs</strong>, <strong>L-Turn with Timber Balusters</strong>, <strong>U-Turn with Tubular Railing</strong> and <strong>Metal Balusters with Tread Plates</strong>.</p>
 <p>The stair body is the root object and one connected, closed mesh. Railing parts are child meshes, grouped by role (handrail, infill rails, posts, supports, couplings, corner connectors, wall brackets); user-added children are kept. <strong>Merge</strong> joins the stair body and tread plates into one mesh and all railing parts into another, with one slot per shared material.</p>
+<p><img alt="The four built-in presets." src="_images/stairs-presets.webp" /></p>
 </section>
 <section id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h2>
@@ -155,6 +156,7 @@
 </ul>
 <p><strong>Reinforcement.</strong> <strong>Side Ribs</strong> adds ribs below both side edges, with <strong>Rib Width</strong> inward from the side and <strong>Rib Z Offset</strong> downward. <strong>Cut Top</strong> continues the rib edge loops through the top polygons; without it only the rib corner stays inset.</p>
 <p><strong>Tread Finish and Bevels.</strong></p>
+<p><img alt="Original Bevel with upper and lower bevels, and Tread Plates." src="_images/stairs-finish.webp" /></p>
 <ul class="simple">
 <li><p><strong>Original Bevel</strong> keeps the structural mesh with <strong>Upper Bevel</strong>, which rounds the tread noses, and <strong>Lower Bevel</strong>, which rounds the tread/riser junctions except at the first step of each flight. Each has its own <strong>Width</strong>, <strong>Segments</strong> and <strong>Profile</strong>. Widths are clamped so bevels never overlap; one segment is a chamfer and profile 0.5 a circular section.</p></li>
 <li><p><strong>Additional Tiles / Plates</strong> makes a <strong>Tread Plates</strong> child with separate solid plates for treads and landings. <strong>Plate Thickness</strong> is recessed into the structure, so finished levels, total rise, riser spacing, the underside and railing bases stay the same; it must be smaller than the riser and slab height.</p></li>
@@ -185,6 +187,7 @@
 </section>
 <section id="collisions">
 <h2>Collisions<a class="headerlink" href="#collisions" title="Link to this heading">¶</a></h2>
+<p><img alt="The collisions of the U-turn preset with the flight following the steps, and as a ramp." src="_images/stairs-collisions.webp" /></p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Switch</p></th>
