@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Godot &mdash; GRAG Documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e99afcfa" />
+            <link rel="author" title="About these documents" href="about.html" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="GRAG Documentation" href="#" />
+            <link rel="prev" title="Texturing and Baking" href="texturing.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="https://mykytapetrenko.github.io/GRAG-docs/"
+                        title="GRAG"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/img/grag_logo.svg" width="64" height="64" alt="GRAG"
+                            class="logo-img"
+                        />
+                        GRAG
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">Working with the Panels</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generators</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="doors.html">Doors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs.html">Stairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs_railings.html">Stair Railings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Games and Texturing</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing.html">Texturing and Baking</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Godot</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Godot</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/MykytaPetrenko/GRAG-docs/tree/main/docs/godot.md" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/godot.md.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="godot">
+<h1>Godot<a class="headerlink" href="#godot" title="Link to this heading">¶</a></h1>
+<section id="export-for-godot">
+<h2>Export for Godot<a class="headerlink" href="#export-for-godot" title="Link to this heading">¶</a></h2>
+<p><strong>Export for Godot</strong> writes <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;.glb</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;.godot.json</span></code> from the asset’s origin, always in the closed pose; opening angles in Blender are only a preview. The parts are at the top of the GLB scene with no node for the asset itself: Godot’s <strong>Import → Root Type</strong> chooses the root type. The manifest, schema <code class="docutils literal notranslate"><span class="pre">grag_asset/1</span></code>, describes the collision shapes and the moving bodies in Godot coordinates; the <a class="reference internal" href="#the-grag-add-on-for-godot">GRAG add-on for Godot</a> builds them on import. Keep both files together and reimport the GLB after updating either one.</p>
+<p>Every export option is on the panel and saved with the asset, so the export dialogs ask only for the destination, <code class="docutils literal notranslate"><span class="pre">//&lt;name&gt;.glb</span></code> or <code class="docutils literal notranslate"><span class="pre">//&lt;name&gt;.obj</span></code> by default, and <strong>Overwrite Existing Files</strong> (off by default). Nodes, meshes and OBJ objects use the part names without Blender’s numeric suffixes, so <code class="docutils literal notranslate"><span class="pre">Door</span> <span class="pre">Leaf</span></code>, not <code class="docutils literal notranslate"><span class="pre">Door</span> <span class="pre">Leaf.001</span></code>. Exports work on copies and never change the scene.</p>
+</section>
+<section id="the-grag-add-on-for-godot">
+<h2>The GRAG add-on for Godot<a class="headerlink" href="#the-grag-add-on-for-godot" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">addons/grag</span></code> is the Godot 4 counterpart of the GRAG Blender extension. When a
+GLB exported by <strong>Export for Godot</strong> is imported, the add-on reads the
+<code class="docutils literal notranslate"><span class="pre">&lt;name&gt;.godot.json</span></code> manifest next to it. It then adds the collision shapes and
+turns door leaves, window sashes and panes of glass into physics bodies. GLB
+files without a manifest are left alone.</p>
+</section>
+<section id="install">
+<h2>Install<a class="headerlink" href="#install" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">addons/grag</span></code> folder that comes with GRAG into the Godot project’s <code class="docutils literal notranslate"><span class="pre">addons</span></code> folder.</p></li>
+<li><p>Enable <strong>GRAG</strong> in <strong>Project → Project Settings → Plugins</strong>.</p></li>
+<li><p>Put each <code class="docutils literal notranslate"><span class="pre">.glb</span></code> and its <code class="docutils literal notranslate"><span class="pre">.godot.json</span></code> in the same folder of the project. If
+the GLB was imported before the plugin was enabled, reimport it.</p></li>
+</ol>
+<p>No import script is needed. Optionally set <strong>Import → Root Type</strong> to
+<code class="docutils literal notranslate"><span class="pre">StaticBody3D</span></code> for the GLB. The root then carries the fixed collision shapes
+itself; otherwise they go into a <code class="docutils literal notranslate"><span class="pre">StaticCollision</span></code> child.</p>
+</section>
+<section id="what-the-import-builds">
+<h2>What the import builds<a class="headerlink" href="#what-the-import-builds" title="Link to this heading">¶</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Door                         Node3D, or StaticBody3D with Root Type
+├── DoorMesh                 MeshInstance3D from the GLB
+├── StaticCollision          StaticBody3D for the root shapes (only without a body root)
+│   ├── JambLeftCollision    CollisionShape3D
+│   └── …
+└── PrimaryLeafPivot         AnimatableBody3D, closed pose
+    ├── PrimaryLeafPivotMesh
+    └── PrimaryLeafCollision
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A body with a <code class="docutils literal notranslate"><span class="pre">motion</span></code> (door leaf, window sash) becomes an
+<code class="docutils literal notranslate"><span class="pre">AnimatableBody3D</span></code>; a fixed body (a pane of glass) becomes a <code class="docutils literal notranslate"><span class="pre">StaticBody3D</span></code>.
+The existing node from the GLB is replaced, so its meshes stay in place. A body
+without visual parts, such as a pane, is created at the manifest <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p></li>
+<li><p>Each body keeps the metadata <code class="docutils literal notranslate"><span class="pre">grag_body_id</span></code>, <code class="docutils literal notranslate"><span class="pre">grag_body_kind</span></code> (<code class="docutils literal notranslate"><span class="pre">leaf</span></code>,
+<code class="docutils literal notranslate"><span class="pre">sash</span></code>, <code class="docutils literal notranslate"><span class="pre">glass</span></code>) and, for moving bodies, <code class="docutils literal notranslate"><span class="pre">grag_motion</span></code>.</p></li>
+<li><p>The scene root gets <code class="docutils literal notranslate"><span class="pre">grag_asset</span></code> metadata with the asset type and the
+number of bodies and shapes, which the dock and CLI use to check the import.</p></li>
+</ul>
+<p>Assets are always exported in the closed pose. <code class="docutils literal notranslate"><span class="pre">grag_motion</span></code> describes the hinge:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hinge</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">axis</span></code></p></td>
+<td><p>Rotation axis in the body’s local space, <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">0]</span></code> for doors and windows</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">closed_degrees</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code>, the exported pose</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">open_degrees</span></code></p></td>
+<td><p>Fully open angle; the sign gives the direction</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">requires_open</span></code></p></td>
+<td><p>Optional <code class="docutils literal notranslate"><span class="pre">grag_body_id</span></code> that must open first, as in a French window pair</p></td>
+</tr>
+</tbody>
+</table>
+<p>Rotate the body around <code class="docutils literal notranslate"><span class="pre">axis</span></code> between the two angles in game code, or pin it to
+the parent with a <code class="docutils literal notranslate"><span class="pre">HingeJoint3D</span></code> and replace it with a <code class="docutils literal notranslate"><span class="pre">RigidBody3D</span></code> for
+force-driven motion.</p>
+</section>
+<section id="dock">
+<h2>Dock<a class="headerlink" href="#dock" title="Link to this heading">¶</a></h2>
+<p>The <strong>GRAG</strong> dock lists every manifest in the project with its asset type and
+the number of bodies and shapes. A red mark lists the problems: a missing GLB, an
+invalid manifest, a scene imported without the plugin, or an import older than
+the manifest. <strong>Reimport All</strong> reimports every GRAG GLB. Double-click an entry to
+open the scene.</p>
+</section>
+<section id="command-line">
+<h2>Command line<a class="headerlink" href="#command-line" title="Link to this heading">¶</a></h2>
+<p>The same checks run without the editor, with short output for scripts and agents:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>godot --headless --path &lt;project&gt; --import
+godot --headless --path &lt;project&gt; --script res://addons/grag/cli.gd -- check
+godot --headless --path &lt;project&gt; --script res://addons/grag/cli.gd -- check --json res://doors/door.glb
+godot --headless --path &lt;project&gt; --script res://addons/grag/cli.gd -- list
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">check</span></code> prints <code class="docutils literal notranslate"><span class="pre">OK</span></code> or <code class="docutils literal notranslate"><span class="pre">FAIL</span></code> per asset, the problems under each failure, and a
+summary line. It exits with code 1 when an asset fails. <code class="docutils literal notranslate"><span class="pre">list</span></code> reads only the
+manifests. <code class="docutils literal notranslate"><span class="pre">--json</span></code> prints one JSON array instead. Run <code class="docutils literal notranslate"><span class="pre">--import</span></code> first, so the
+scenes are imported with the plugin enabled.</p>
+</section>
+<section id="manifest-grag-asset-1">
+<h2>Manifest <code class="docutils literal notranslate"><span class="pre">grag_asset/1</span></code><a class="headerlink" href="#manifest-grag-asset-1" title="Link to this heading">¶</a></h2>
+<p>Blender writes the manifest from the collision objects in the asset’s
+<strong>Collisions</strong> collection, so hand edits to those objects reach Godot. All values
+are in metres in Godot axes: X right, Y up, and Blender’s −Y becomes +Z.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grag_asset/1"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"asset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"door"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"scene"</span><span class="p">:</span><span class="w"> </span><span class="s2">"door.glb"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="s2">"godot_y_up_meters"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"root_shapes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JambLeftCollision"</span><span class="p">,</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BoxShape3D"</span><span class="p">,</span><span class="w"> </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.032</span><span class="p">,</span><span class="w"> </span><span class="mf">2.43</span><span class="p">,</span><span class="w"> </span><span class="mf">0.34</span><span class="p">],</span>
+<span class="w">     </span><span class="nt">"origin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.494</span><span class="p">,</span><span class="w"> </span><span class="mf">1.215</span><span class="p">,</span><span class="w"> </span><span class="mf">0.07</span><span class="p">],</span><span class="w"> </span><span class="nt">"basis"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]]}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"bodies"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PrimaryLeafPivot"</span><span class="p">,</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"leaf"</span><span class="p">,</span><span class="w"> </span><span class="nt">"origin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.4765</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.1055</span><span class="p">],</span>
+<span class="w">     </span><span class="nt">"motion"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hinge"</span><span class="p">,</span><span class="w"> </span><span class="nt">"axis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="nt">"closed_degrees"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"open_degrees"</span><span class="p">:</span><span class="w"> </span><span class="mi">-90</span><span class="p">},</span>
+<span class="w">     </span><span class="nt">"shapes"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="nt">"bodies"</span><span class="p">:</span><span class="w"> </span><span class="p">[]}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Shape <code class="docutils literal notranslate"><span class="pre">type</span></code></p></th>
+<th class="head"><p>Fields</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BoxShape3D</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">size</span></code>, <code class="docutils literal notranslate"><span class="pre">origin</span></code> and <code class="docutils literal notranslate"><span class="pre">basis</span></code> (three column vectors) of the shape node</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ConvexPolygonShape3D</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">points</span></code> in the space of the owning body</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ConcavePolygonShape3D</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">faces</span></code>, three points per triangle, in the space of the owning body</p></td>
+</tr>
+</tbody>
+</table>
+<p>Shapes in <code class="docutils literal notranslate"><span class="pre">root_shapes</span></code> belong to the asset root. Each entry in <code class="docutils literal notranslate"><span class="pre">bodies</span></code> holds the
+shapes of that body and its nested <code class="docutils literal notranslate"><span class="pre">bodies</span></code>, such as a pane of glass on an opening
+sash. A body’s <code class="docutils literal notranslate"><span class="pre">origin</span></code> is relative to its parent body in the closed pose. Names
+are unique within the manifest and become node names.</p>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="texturing.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Texturing and Baking
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">Godot</a><ul>
+<li><a class="reference internal" href="#export-for-godot">Export for Godot</a></li>
+<li><a class="reference internal" href="#the-grag-add-on-for-godot">The GRAG add-on for Godot</a></li>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#what-the-import-builds">What the import builds</a></li>
+<li><a class="reference internal" href="#dock">Dock</a></li>
+<li><a class="reference internal" href="#command-line">Command line</a></li>
+<li><a class="reference internal" href="#manifest-grag-asset-1">Manifest <code class="docutils literal notranslate"><span class="pre">grag_asset/1</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Wagtail Sphinx Theme 6.3.0
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2026, Squeezy Pixels (Mykyta Petrenko)
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

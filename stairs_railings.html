@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Stair Railings &mdash; GRAG Documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e99afcfa" />
+            <link rel="author" title="About these documents" href="about.html" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="GRAG Documentation" href="#" />
+            <link rel="next" title="Collisions" href="collisions.html" />
+            <link rel="prev" title="Stairs" href="stairs.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="https://mykytapetrenko.github.io/GRAG-docs/"
+                        title="GRAG"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/img/grag_logo.svg" width="64" height="64" alt="GRAG"
+                            class="logo-img"
+                        />
+                        GRAG
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">Working with the Panels</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generators</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="doors.html">Doors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs.html">Stairs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Stair Railings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Games and Texturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing.html">Texturing and Baking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="godot.html">Godot</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Stair Railings</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/MykytaPetrenko/GRAG-docs/tree/main/docs/stairs_railings.md" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/stairs_railings.md.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="stair-railings">
+<h1>Stair Railings<a class="headerlink" href="#stair-railings" title="Link to this heading">¶</a></h1>
+<p>The <strong>Railing System</strong> section of the <strong>Stairs Generator</strong> panel builds four types of railing. This page describes each of them; the <a class="reference internal" href="stairs.html"><span class="std std-doc">Stairs</span></a> page covers the stairs themselves.</p>
+<p>Turn on <strong>Enable Railing</strong>, choose the <strong>Type</strong> and the mounting of each side. The railing follows the flights and the inner and outer landing routes, including 90° and 180° turns in either direction. On 90° turns with a wide <strong>Flight Gap</strong>, the inner route follows the exposed edges of the landing at <strong>Edge Inset</strong>; the handrail, infill rails and landing posts share that route. Overhanging landing routes first level out from the flight slope, then turn in plan; the outgoing route levels with the next flight before it climbs, so slope and direction never change at the same fitting.</p>
+<p>Terminology: the <strong>handrail</strong> is the upper member you hold; the <strong>railing system</strong> is the whole assembly. The thin rails below it are <strong>infill rails</strong>, the uprights are <strong>posts</strong>, their thin top connections are <strong>handrail supports</strong>, and the sleeves at elbows are <strong>coupling sleeves</strong>. Each type keeps its own section dimensions when you switch between types, and selecting any railing part opens its stairs in the panel.</p>
+<section id="mounting-and-coverage">
+<h2>Mounting and coverage<a class="headerlink" href="#mounting-and-coverage" title="Link to this heading">¶</a></h2>
+<p>Each side, <strong>Inner</strong> and <strong>Outer</strong>, has its own mounting and <strong>Include Landings</strong> switch. Inner and outer follow <strong>Turn Direction</strong>; the panel also shows which side is left or right.</p>
+<ul class="simple">
+<li><p><strong>None</strong> builds nothing on that side.</p></li>
+<li><p><strong>Flight Mounted</strong> builds the chosen type with posts and infill on the stairs.</p></li>
+<li><p><strong>Wall Mounted</strong> builds only the handrail of the chosen type, with wall brackets and mounting plates. <strong>Wall Clearance</strong> is measured from the handrail surface to the wall face; bracket spacing, plate radius and bracket stem radius and sides are adjustable.</p></li>
+</ul>
+<p>With <strong>Include Landings</strong> the side continues around the intermediate landings. Without it every flight has its own capped section and there is no level handrail over the landings. The two sides choose their coverage independently of their mounting.</p>
+<p><strong>Preview Wall</strong> shows wireframe guide walls on wall-mounted sides, following their coverage, with adjustable thickness and height above the handrail. The walls are viewport-only, excluded from renders and the GLB, and are helper geometry for ambient occlusion in the Painter export. The button rebuilds at once, even with <strong>Auto Rebuild</strong> off.</p>
+</section>
+<section id="posts">
+<h2>Posts<a class="headerlink" href="#posts" title="Link to this heading">¶</a></h2>
+<p>All four types share the post layout:</p>
+<ul class="simple">
+<li><p><strong>Steps per Post</strong> sets the interval in treads, independently of the metric spacing on landings.</p></li>
+<li><p><strong>Flight Distribution</strong>: <strong>Balanced Treads</strong> spreads the posts over whole treads as evenly as possible; <strong>Every N Steps</strong> keeps the exact interval and leaves any remainder in the last bay. Both always include the first and last tread.</p></li>
+<li><p>Each landing starts and ends with a post. The post before each upper flight stands half a tread back on the landing, clear of the first riser. Without <strong>Include Landings</strong>, every flight behaves like the first: its posts stay on its treads.</p></li>
+<li><p>Landing corners normally get posts too. Nearby corner and elbow points share one post when they are within half a tread or the post’s footprint; tread posts and the post before an upper flight win, so short returns never get doubled posts. Tight inner gaps may leave out extra corner posts.</p></li>
+<li><p><strong>Calculate from Steps per Post</strong> (on by default) sets the landing spacing to the tread depth times <strong>Steps per Post</strong>; turn it off to enter <strong>Landing Post Spacing</strong>. Each straight landing span is divided into equal intervals near that length.</p></li>
+</ul>
+</section>
+<section id="type-1-tubular">
+<h2>Type 1 · Tubular<a class="headerlink" href="#type-1-tubular" title="Link to this heading">¶</a></h2>
+<p>A round handrail with rounded elbows and coupling sleeves, round posts and continuous round infill rails.</p>
+<ul>
+<li><p><strong>Railing Height</strong> and <strong>Edge Inset</strong> place the handrail centreline above the sloping stair line and landings, and inward from the stair edge.</p></li>
+<li><p><strong>Handrail Radius</strong> and <strong>Elbow Radius</strong> set the main tube and its rounded elbows. Short landing segments limit the elbow size; a configuration too tight for the tube reports an error.</p></li>
+<li><p><strong>Coupling Length</strong> and <strong>Coupling Thickness</strong> set the hollow sleeves at both ends of each elbow.</p></li>
+<li><p><strong>Infill Rail Count</strong> sets the number of thin continuous rails (4 by default, 0 allowed), with their own radius and clearance above the steps. They have rounded turns and no couplings.</p></li>
+<li><p><strong>Post Radius</strong> sets the posts. Base flange, shaft and upper collar form one closed, connected mesh per post, joined by flat ring shoulders, with no overlapping cylinders or hidden caps.</p></li>
+<li><p><strong>Support Construction</strong> is <strong>Separate Support</strong>, a child mesh, or <strong>Integral Stem</strong>, which joins the upper collar through a flat shoulder and shares its rings. <strong>Support Stem Radius</strong> and <strong>Support Stem Length</strong> size it.</p></li>
+<li><p>The cylinder resolution is set per component; disabled fields show the inherited count, and <strong>Elbow Segments</strong> sets the bend resolution:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head text-right"><p>Default sides</p></th>
+<th class="head"><p>Inheritance</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Handrail and coupling sleeves</p></td>
+<td class="text-right"><p>16</p></td>
+<td><p>Own setting</p></td>
+</tr>
+<tr class="row-odd"><td><p>Infill rails</p></td>
+<td class="text-right"><p>8</p></td>
+<td><p>Own setting</p></td>
+</tr>
+<tr class="row-even"><td><p>Posts, with flange and collar</p></td>
+<td class="text-right"><p>16</p></td>
+<td><p><strong>Same as Handrail</strong>, on by default</p></td>
+</tr>
+<tr class="row-odd"><td><p>Separate handrail supports</p></td>
+<td class="text-right"><p>8</p></td>
+<td><p><strong>Same as Post</strong>, off by default</p></td>
+</tr>
+<tr class="row-even"><td><p>Integral support stems</p></td>
+<td class="text-right"><p>Post count</p></td>
+<td><p>Always follows the posts</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="type-2-rectangular">
+<h2>Type 2 · Rectangular<a class="headerlink" href="#type-2-rectangular" title="Link to this heading">¶</a></h2>
+<p>Square posts, a rectangular handrail and straight round infill rails. Every change of direction has one fixed, one-piece corner connector for the handrail and one for each infill rail, with no hinged parts; straight members are trimmed at the fittings instead of running through the corner.</p>
+<ul class="simple">
+<li><p><strong>Handrail Width</strong> and <strong>Handrail Thickness</strong> set the handrail section, 50 × 25 mm by default.</p></li>
+<li><p><strong>Square Post Width</strong> sets the posts, 40 mm by default. Flange, shaft and collar stay one connected mesh with flat shoulders.</p></li>
+<li><p><strong>Corner Connector Length</strong> sets the target length of each fitting leg; it adapts to the section size and the space available, and impossible combinations keep the previous geometry and report an error.</p></li>
+<li><p><strong>Connector Allowance</strong> adds material around the member’s section at the fitting, 2 mm by default.</p></li>
+<li><p>Infill rail radius, sides, count and clearance, post spacing and the inner and outer controls work as in Type 1. Integral stems are square and share the post topology through a flat shoulder.</p></li>
+</ul>
+</section>
+<section id="type-3-vertical-balusters">
+<h2>Type 3 · Vertical Balusters<a class="headerlink" href="#type-3-vertical-balusters" title="Link to this heading">¶</a></h2>
+<p>A metal balustrade with vertical rectangular bars, a continuous sloping bottom rail, square posts with integral base plates and a contrasting rectangular handrail. The handrail and bottom rail share mitre rings at direction changes instead of separate elbows. Bars stay vertical and their ends are cut to the slope of the rails.</p>
+<p>A continuous metal <strong>top rail</strong> sits flush beneath the handrail, including slopes and landing turns. It shares <strong>Bottom Rail Width</strong> and has its own <strong>Top Rail Thickness</strong>, 15 mm by default, less than the 35 mm bottom rail. Bars end at its underside and the wider posts reach its top, directly beneath the handrail. Wall-mounted Type 3 handrails have the top rail too, with the brackets meeting its underside.</p>
+<p>The <strong>Vertical Baluster Railing</strong> has exactly two material slots, stored with the stairs and kept through rebuilds, type and mounting switches, copies and saving:</p>
+<ol class="arabic simple">
+<li><p><strong>Metal</strong>: posts, base plates, bars, bottom and top rail; dark powder-coated metal by default.</p></li>
+<li><p><strong>Handrail</strong>: the handrail; warm timber by default.</p></li>
+</ol>
+<p>Set them in <strong>Materials · 2 Slots</strong> or in the railing’s ordinary material slots; edits made with <strong>Auto Rebuild</strong> off survive saving.</p>
+<p><strong>Baluster Spacing</strong> is the fixed distance between neighbouring bars. Each bay between posts gets a centred group of bars at that spacing; the two gaps at the posts may differ. By default the group has one bar fewer than fits; <strong>Dense Infill</strong> adds it back, for smaller gaps at the posts. <strong>Baluster Width</strong> and <strong>Baluster Depth</strong> set the bar section across and along the railing, and <strong>Bottom Clearance</strong> keeps the bottom rail above the step noses.</p>
+<p><strong>Handrail Boards and Bevels</strong> offers <strong>Top Edge Bevel</strong>, <strong>Bottom Edge Bevel</strong> and <strong>Start/End Cap Bevel</strong>, each with its own width and a shared segment count and profile. End bevels follow the edge bevels: with only the top one, the bottom edge of each end stays square, and the other way round; with neither or both, the whole end outline is bevelled. Widths are clamped below half the smaller side of the handrail section. With smooth shading, the whole handrail shades smoothly and only unrounded corners and end outlines are sharp. <strong>Split into Boards</strong> makes separate closed timber pieces at each change of direction, with long runs divided by <strong>Maximum Board Length</strong> and <strong>Joint Gap</strong> (3 mm by default) measured across the joint, mitres included. The metal rails stay continuous.</p>
+</section>
+<section id="type-4-metal-balusters">
+<h2>Type 4 · Metal Balusters<a class="headerlink" href="#type-4-metal-balusters" title="Link to this heading">¶</a></h2>
+<p>A flat metal handrail over the same bars and square posts as Type 3, without a timber handrail or top rail. The railing has one <strong>Metal</strong> material slot, shared with its posts, bottom rail and wall brackets.</p>
+<p>The defaults are a 50 × 12 mm handrail, 40 mm posts, a 30 mm bottom rail and 16 mm bars; the widths must grow in that order from bar to bottom rail to post to handrail. Posts and bars meet the handrail’s underside with cuts matching the slope.</p>
+<p>Every open handrail end turns down in a half-circle return. <strong>Ends and Extensions → End Return Radius</strong> sets its centreline radius, 40 mm by default, larger than half the handrail thickness, and <strong>End Return Segments</strong> its resolution, 12 by default. The return is fitted to the vertical boundary at the first and last tread, allowing for the slope and the arc’s thickness. With <strong>Include Landings</strong>, the handrail continues through the landing mitres and has returns only at its two open ends; without it, every flight is a separate section with returns at both ends. Wall-mounted sections use the same returned handrail.</p>
+</section>
+<section id="ends-and-extensions">
+<h2>Ends and extensions<a class="headerlink" href="#ends-and-extensions" title="Link to this heading">¶</a></h2>
+<p>In every type, the lower members stop at the actual end posts, with ends cut vertically through their centres even on slopes, and only the handrail extends past the first and last post. Bars stay between the posts, and a section with a single post has no bottom rail or bars.</p>
+<p>For Types 1–3, <strong>Handrail Start Extension</strong> and <strong>Handrail End Extension</strong> move the open handrail ends beyond the route, and <strong>Infill Start Setback</strong> and <strong>Infill End Setback</strong> shorten the infill rails (Types 1 and 2) or the metal frame (Type 3, labelled <strong>Metal Start Setback</strong> and <strong>Metal End Setback</strong>). Each defaults to 50 mm and follows the local slope or level direction. With flight-only coverage they apply to each flight’s free ends, while landing corners keep their continuous route. Type 4 fits its ends automatically.</p>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="stairs.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Stairs
+    </a>
+    <a class="float-right" href="collisions.html" title="Next">
+        Collisions <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">Stair Railings</a><ul>
+<li><a class="reference internal" href="#mounting-and-coverage">Mounting and coverage</a></li>
+<li><a class="reference internal" href="#posts">Posts</a></li>
+<li><a class="reference internal" href="#type-1-tubular">Type 1 · Tubular</a></li>
+<li><a class="reference internal" href="#type-2-rectangular">Type 2 · Rectangular</a></li>
+<li><a class="reference internal" href="#type-3-vertical-balusters">Type 3 · Vertical Balusters</a></li>
+<li><a class="reference internal" href="#type-4-metal-balusters">Type 4 · Metal Balusters</a></li>
+<li><a class="reference internal" href="#ends-and-extensions">Ends and extensions</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Wagtail Sphinx Theme 6.3.0
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2026, Squeezy Pixels (Mykyta Petrenko)
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Windows &mdash; GRAG Documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e99afcfa" />
+            <link rel="author" title="About these documents" href="about.html" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="GRAG Documentation" href="#" />
+            <link rel="next" title="Stairs" href="stairs.html" />
+            <link rel="prev" title="Doors" href="doors.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="https://mykytapetrenko.github.io/GRAG-docs/"
+                        title="GRAG"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/img/grag_logo.svg" width="64" height="64" alt="GRAG"
+                            class="logo-img"
+                        />
+                        GRAG
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">Working with the Panels</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generators</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="doors.html">Doors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs.html">Stairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs_railings.html">Stair Railings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Games and Texturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing.html">Texturing and Baking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="godot.html">Godot</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Windows</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/MykytaPetrenko/GRAG-docs/tree/main/docs/windows.md" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/windows.md.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="windows">
+<h1>Windows<a class="headerlink" href="#windows" title="Link to this heading">¶</a></h1>
+<section id="creating-windows">
+<h2>Creating windows<a class="headerlink" href="#creating-windows" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>For a standalone window, set the opening in <strong>Opening and Walls</strong> and press <strong>Build at Cursor</strong>. For a window in a Room Builder plan, select a window opening in <strong>Openings</strong> or its <strong>Window Box</strong> object and press <strong>Build in Opening</strong>.</p></li>
+<li><p>Choose a layout from the <strong>Window Presets</strong> menu, then adjust the number of sections, their hinges and their width ratios. Hinge sides are seen from outside.</p></li>
+<li><p>To preview an open pose, set <strong>Preview Opening</strong>. After the opening changes, press <strong>Sync to Opening</strong>.</p></li>
+</ol>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Preset</p></th>
+<th class="head"><p>Sections from left to right, seen from outside</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Single Fixed Pane</strong></p></td>
+<td><p>One fixed pane</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Two Fixed Panes</strong></p></td>
+<td><p>Two fixed panes</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Two Panes, Right Sash</strong></p></td>
+<td><p>A fixed pane and a right sash</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Three Fixed Panes</strong></p></td>
+<td><p>Three fixed panes</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Three Panes, Center Sash</strong></p></td>
+<td><p>Fixed pane, centre sash, fixed pane</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>French Pair, No Fixed Post</strong></p></td>
+<td><p>Two sashes hinged on the outer edges; the right one carries a meeting stile over the centre joint</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h2>
+<p><strong>Sections.</strong> <strong>Sections</strong> sets one to three sections, each with a hinge type (<strong>Fixed Glass</strong>, <strong>Left Hinge</strong> or <strong>Right Hinge</strong>) and a width ratio. <strong>French Pair Without Fixed Post</strong> turns two sashes into a pair without a mullion.</p>
+<p><strong>Sashes and Hardware.</strong> <strong>Handle Style</strong> chooses the handle of opening sashes: <strong>Match Window Profile</strong> takes the <strong>Modern Lever</strong> for uPVC and the <strong>Curved Round Pull</strong> for timber; either can be chosen directly, as can the <strong>Flat Strap Pull</strong> or <strong>None</strong>. The mounting plates are solid and the handle belongs to the sash’s moving hardware mesh. <strong>Handle Height</strong> places the handle from the bottom of the sash, 0.5 being the middle; near the ends the generator keeps the whole handle on the stile. <strong>Interactive Sashes in Godot</strong> makes opening sashes separate bodies in Godot. <strong>Opening Angle</strong> sets how far sashes open.</p>
+<p><strong>Frame and Glazing.</strong> <strong>Joinery Profile</strong> is <strong>uPVC</strong>, with a chamfered approach to the stop, or <strong>Traditional Timber</strong>, with a square outer rebate, an inner sash quarter and a timber material; both are simplified inward-opening windows. <a class="reference external" href="https://www.globhaus.com/cad/">uPVC sections by GLOBHAUS</a> · <a class="reference external" href="https://jmjoinery.co.uk/windows/timber-windows/flush-casement-windows/">Timber window drawings by JM Joinery</a> <strong>Frame Width (Top and Sides)</strong>, <strong>Bottom Frame Width</strong> (0 uses the frame width) and <strong>Frame Depth</strong> size the frame; <strong>Frame Overlap Into Wall</strong> lets it reach into the wall; <strong>Frame Bevel</strong> chamfers the exposed aperture edges, 6 mm by default. The stepped joint has an outer stop on the frame and an inner lap on the sash, with a gasket on the stop’s shelf; <strong>Frame Stop Width</strong>, <strong>Sash Overlap</strong> and <strong>Minimum Sash Clearance</strong> set it, and the generator widens the clearance when the sash corner’s path needs it. <strong>Mullion Width</strong> and <strong>Sash Profile Width</strong> size the members, and <strong>Glazing Thickness</strong> and <strong>Glass Offset</strong> place the glazing.</p>
+<p><strong>Reveals and Sill.</strong> <strong>Reveal Angle</strong> slopes the three inner reveals toward the frame. <strong>Sill Projection Into Room</strong>, <strong>Sill Thickness</strong> and <strong>Sill Bevel</strong> shape the inner sill.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Part</p></th>
+<th class="head"><p>Rule</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Frame (<code class="docutils literal notranslate"><span class="pre">Frame</span></code>)</p></td>
+<td><p>Outer frame, fixed mullions and outer stops form one connected mesh. Its outer edge may touch the wall or reach into it.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Reveals (<code class="docutils literal notranslate"><span class="pre">Slopes</span></code>)</p></td>
+<td><p>Left, right and top reveals form one mesh with shared vertices at the top corners. They meet the opening edges exactly on the inner wall face and angle toward the frame. There is no bottom reveal.</p></td>
+</tr>
+<tr class="row-even"><td><p>Sill (<code class="docutils literal notranslate"><span class="pre">Windowsill</span></code>)</p></td>
+<td><p>Its bottom lies exactly on the opening’s bottom plane, <code class="docutils literal notranslate"><span class="pre">Z</span> <span class="pre">=</span> <span class="pre">0</span></code> in asset space. It meets the frame and may project into the room; its bevel keeps a flat bearing.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sash (<code class="docutils literal notranslate"><span class="pre">SashNN…</span></code>)</p></td>
+<td><p>Two hinges share one axis; the sash origin is at the centre of the lower hinge pin. Pins and fixed hinge plates belong to <code class="docutils literal notranslate"><span class="pre">FrameHinges</span></code>; moving hinge halves and the handle belong to the sash hardware.</p></td>
+</tr>
+</tbody>
+</table>
+<p>In a French pair the left sash opens first and the right one, with the meeting stile, second; they close in reverse. The generator checks that the chosen angle lets the meeting stile pass the open left sash, and <strong>Preview Opening</strong> shows the sequence. <a class="reference external" href="https://www.liniar.co.uk/upvc-windows/french">Meeting stile in Liniar French windows</a> The handles and hinges are smooth on rounded surfaces and sharp at hard joints.</p>
+</section>
+<section id="axes-and-origin">
+<h2>Axes and origin<a class="headerlink" href="#axes-and-origin" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Window</span></code> is the asset root. Its origin is where the outer and inner walls meet, at the middle of the opening width and on its bottom plane; in Room Builder that is the wall contour at the level height plus the opening’s bottom offset. +Z points up, +Y into the room perpendicular to the wall and X along the opening width, in metres. In Godot, +Y is up and the room side is −Z.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">d_ext</span></code> and <code class="docutils literal notranslate"><span class="pre">d_int</span></code> are the distances from the joint to the outer and inner wall faces, those faces lie at <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">=</span> <span class="pre">−d_ext</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">=</span> <span class="pre">+d_int</span></code>. The middle plane of the fixed frame and glazing lies at <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">=</span> <span class="pre">(d_int</span> <span class="pre">−</span> <span class="pre">d_ext)</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">offset</span></code>, where <strong>Glass Offset</strong> is 0 by default and positive toward the room. Each sash with its glazing sits further into the room, behind the frame’s outer stop. Fitting to an opening takes the width, height, bottom level, inward direction and both wall depths from it; a standalone window takes its position from the cursor.</p>
+</section>
+<section id="uv-and-texturing">
+<h2>UV and texturing<a class="headerlink" href="#uv-and-texturing" title="Link to this heading">¶</a></h2>
+<p>The profiles are unwrapped strictly along the generator’s seams:</p>
+<ul class="simple">
+<li><p>Each diagonal joint of a sash has a seam through the whole cross-section, across faces, bevels and the inner and outer profile.</p></li>
+<li><p>The top and bottom frame rails unwrap as whole pieces; their ends and the outer faces of the stiles are separate islands, and cross seams separate stiles from rails through the whole section.</p></li>
+<li><p>The inner surface of a fixed opening is split by a closed seam in the glass mid-plane; in an opening section the seam uses the loop where the stop meets the inner surface.</p></li>
+<li><p>Two closed seams along the sash’s outer outlines and cross seams in every corner separate its four outer islands.</p></li>
+<li><p>Each gasket ring in <code class="docutils literal notranslate"><span class="pre">FrameSeals</span></code> has seams through the section at all four corners and along its outer edge on the stop side, so each side unwraps as one narrow strip.</p></li>
+</ul>
+<p>Handles, hinges and the sill get their islands by projection. <strong>One Material</strong> is on by default for windows: all painted parts share one atlas and one texture set. The GLB has three materials: <code class="docutils literal notranslate"><span class="pre">slopes</span></code> (reveals, tiled UVs), <code class="docutils literal notranslate"><span class="pre">glass</span></code> (all glazing, tiled UVs) and <code class="docutils literal notranslate"><span class="pre">frame</span></code> (frame, sash profiles, gaskets, hardware and inner sill, on the shared atlas). In Blender each part keeps its own material for the Material ID bake.</p>
+</section>
+<section id="collisions">
+<h2>Collisions<a class="headerlink" href="#collisions" title="Link to this heading">¶</a></h2>
+<p><strong>Collision Detail</strong> sets how closely the collisions follow the window. All shapes are boxes, except the reveals.</p>
+<p><img alt="The same window with each collision detail level. Green shapes belong to the fixed window, amber ones to the opening sash and blue ones to separate panes of glass." src="_images/window-collision-detail.webp" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Detail</p></th>
+<th class="head"><p>Frame</p></th>
+<th class="head"><p>Sashes</p></th>
+<th class="head"><p>Glass</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Solid Block</strong></p></td>
+<td><p>One <code class="docutils literal notranslate"><span class="pre">WindowCollision</span></code> box over the frame’s outer size, at frame depth</p></td>
+<td><p>No shapes of their own. Sashes stay closed in Godot, even with <strong>Interactive Sashes in Godot</strong>: their meshes export closed under the root</p></td>
+<td><p>Inside the block</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sash Boxes</strong> (default)</p></td>
+<td><p>Boxes for the stiles, top and bottom rails, mullions and stop shelves; a window without sashes gets one <code class="docutils literal notranslate"><span class="pre">WindowCollision</span></code></p></td>
+<td><p>One <code class="docutils literal notranslate"><span class="pre">SashNNCollision</span></code> box per sash</p></td>
+<td><p>Fixed glazing is covered by a box at full frame depth</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Frame and Glass</strong></p></td>
+<td><p>As <strong>Sash Boxes</strong>, also for fixed windows; boxes follow the frame members without bevels</p></td>
+<td><p>Four boxes along the sash profile: <code class="docutils literal notranslate"><span class="pre">SashNNLeft</span></code>, <code class="docutils literal notranslate"><span class="pre">Right</span></code>, <code class="docutils literal notranslate"><span class="pre">Bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">Top</span></code></p></td>
+<td><p>A thin <code class="docutils literal notranslate"><span class="pre">GlassNNCollision</span></code> box as thick as the glazing unit for each pane</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Frame and Glass Bodies</strong></p></td>
+<td><p>As <strong>Frame and Glass</strong></p></td>
+<td><p>As <strong>Frame and Glass</strong></p></td>
+<td><p>As <strong>Frame and Glass</strong>, with each pane’s box under its own <code class="docutils literal notranslate"><span class="pre">GlassNNBody</span></code> empty, which becomes a separate <code class="docutils literal notranslate"><span class="pre">StaticBody3D</span></code> in Godot</p></td>
+</tr>
+</tbody>
+</table>
+<p>The frame depth sets the depth of the main boxes; sash boxes sit further into the room with their profile, and outer stop boxes cover only their shelf, leaving the sash room to open inward. An opening sash has a simple shape of its own in its hinge’s space; static boxes leave its opening free, so it can turn through its full range without catching on the frame, reveals or sill. <strong>Sill</strong> (on by default) adds a box for the inner sill; <strong>Reveals</strong> (off by default) adds convex shapes for the three reveals, from the same eight points as their meshes, that leave the opening free.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">GlassNNBody</span></code> sits at the centre of its pane. In Blender, the pane body of a sash is a child of the sash pivot and turns with it. In the manifest, the pane of an interactive sash is nested in the sash body; panes of fixed sections and of sashes that stay closed belong to the root. Each pane body has <code class="docutils literal notranslate"><span class="pre">grag_body_kind</span></code> <code class="docutils literal notranslate"><span class="pre">glass</span></code>, for its own collision layer, physics material or breaking logic. Without <strong>Generate Collisions</strong> the manifest still has the interactive sash bodies and their motion, but no shapes.</p>
+</section>
+<section id="export-for-godot">
+<h2>Export for Godot<a class="headerlink" href="#export-for-godot" title="Link to this heading">¶</a></h2>
+<p>With <strong>Merge</strong>, the fixed parts join into <code class="docutils literal notranslate"><span class="pre">WindowMesh</span></code> under the root and each interactive sash into <code class="docutils literal notranslate"><span class="pre">SashNNMesh</span></code> under its pivot; without it the GLB keeps the separate parts. <strong>Separate Handles</strong> in <strong>Merge and Export</strong> exports each handle as its own mesh <code class="docutils literal notranslate"><span class="pre">SashNNHandle</span></code> directly under its sash node, turning around its local Z, with the rose staying on the sash. When the sash does not open in Godot, the handle is a child of the sash’s visual mesh. Imported in Godot, for one interactive sash with a sill collision:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Window                       Node3D, or StaticBody3D with Root Type
+├── WindowMesh               MeshInstance3D (frame, reveals, sill)
+├── StaticCollision          StaticBody3D for the fixed shapes
+│   ├── FrameLeftCollision   CollisionShape3D
+│   ├── FrameRightCollision
+│   ├── FrameTopCollision
+│   ├── FrameBottomCollision
+│   ├── FrameStop01…Collision (the four stop shelves)
+│   └── WindowsillCollision
+└── Sash01                   AnimatableBody3D on the hinge axis
+    ├── Sash01Mesh           MeshInstance3D
+    └── Sash01Collision      CollisionShape3D
+</pre></div>
+</div>
+<p>Sash ids follow their sections, such as <code class="docutils literal notranslate"><span class="pre">Sash01</span></code> and <code class="docutils literal notranslate"><span class="pre">Sash02</span></code>. Each sash’s <code class="docutils literal notranslate"><span class="pre">grag_motion</span></code> has the local <code class="docutils literal notranslate"><span class="pre">axis</span></code>, <code class="docutils literal notranslate"><span class="pre">closed_degrees</span></code> <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">open_degrees</span></code>, signed by direction; on the right sash of a French pair, <code class="docutils literal notranslate"><span class="pre">requires_open</span></code> names the sash that must open first. Without <strong>Interactive Sashes in Godot</strong>, the sash meshes and their shapes are exported closed under the root.</p>
+</section>
+<section id="export-for-substance-painter">
+<h2>Export for Substance Painter<a class="headerlink" href="#export-for-substance-painter" title="Link to this heading">¶</a></h2>
+<p>Glass is left out of both files. Each sash is a bake group moved apart along X, at least 0.5 m from the wall and from other sashes. The reveals and an exterior wall, <code class="docutils literal notranslate"><span class="pre">ExteriorWall_high</span></code>, are only in the high file, for ambient occlusion: the wall’s outer plane lies at <strong>Exterior Wall Depth</strong> and its opening faces run from it to the frame’s outer plane. <strong>Exterior Sill Thickness</strong> raises the bottom of that exterior opening by the thickness of an outside sill (0 m by default); export again after changing it. With <strong>One Material</strong> the low file has one texture set, <code class="docutils literal notranslate"><span class="pre">Window_Paint</span></code>.</p>
+</section>
+<section id="use-in-a-game-scene">
+<h2>Use in a game scene<a class="headerlink" href="#use-in-a-game-scene" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Place <code class="docutils literal notranslate"><span class="pre">Window</span></code> at the middle of the opening’s bottom edge on the wall joint plane, facing the room, and check the fit in vertical and horizontal sections. For another opening size, generate a matching window in Blender.</p></li>
+<li><p>Check the imported tree and shapes. A closed sash’s shape covers its opening; open, the opening must be free of static shapes. Check the motion from closed to fully open with the collisions this instance uses.</p></li>
+<li><p>Drive each sash body found by <code class="docutils literal notranslate"><span class="pre">grag_body_id</span></code>. For force-driven opening, replace it with a <code class="docutils literal notranslate"><span class="pre">RigidBody3D</span></code> and pin it to the fixed root with a <code class="docutils literal notranslate"><span class="pre">HingeJoint3D</span></code>, using its pivot, axis and the limits from <code class="docutils literal notranslate"><span class="pre">grag_motion</span></code>. <a class="reference external" href="https://docs.godotengine.org/en/stable/classes/class_hingejoint3d.html">HingeJoint3D</a></p></li>
+</ol>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="doors.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Doors
+    </a>
+    <a class="float-right" href="stairs.html" title="Next">
+        Stairs <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">Windows</a><ul>
+<li><a class="reference internal" href="#creating-windows">Creating windows</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#axes-and-origin">Axes and origin</a></li>
+<li><a class="reference internal" href="#uv-and-texturing">UV and texturing</a></li>
+<li><a class="reference internal" href="#collisions">Collisions</a></li>
+<li><a class="reference internal" href="#export-for-godot">Export for Godot</a></li>
+<li><a class="reference internal" href="#export-for-substance-painter">Export for Substance Painter</a></li>
+<li><a class="reference internal" href="#use-in-a-game-scene">Use in a game scene</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Wagtail Sphinx Theme 6.3.0
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2026, Squeezy Pixels (Mykyta Petrenko)
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Stairs &mdash; GRAG Documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e99afcfa" />
+            <link rel="author" title="About these documents" href="about.html" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="GRAG Documentation" href="#" />
+            <link rel="next" title="Stair Railings" href="stairs_railings.html" />
+            <link rel="prev" title="Windows" href="windows.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="https://mykytapetrenko.github.io/GRAG-docs/"
+                        title="GRAG"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/img/grag_logo.svg" width="64" height="64" alt="GRAG"
+                            class="logo-img"
+                        />
+                        GRAG
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">Working with the Panels</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generators</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="doors.html">Doors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Stairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs_railings.html">Stair Railings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Games and Texturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing.html">Texturing and Baking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="godot.html">Godot</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Stairs</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/MykytaPetrenko/GRAG-docs/tree/main/docs/stairs.md" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/stairs.md.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="stairs">
+<h1>Stairs<a class="headerlink" href="#stairs" title="Link to this heading">¶</a></h1>
+<section id="creating-stairs">
+<h2>Creating stairs<a class="headerlink" href="#creating-stairs" title="Link to this heading">¶</a></h2>
+<p>Press <strong>Build at Cursor</strong>. New stairs appear at the 3D cursor. Select the stair mesh or any generated railing part to edit the stairs. Built-in presets: <strong>Straight Concrete Stairs</strong>, <strong>L-Turn with Timber Balusters</strong>, <strong>U-Turn with Tubular Railing</strong> and <strong>Metal Balusters with Tread Plates</strong>.</p>
+<p>The stair body is the root object and one connected, closed mesh. Railing parts are child meshes, grouped by role (handrail, infill rails, posts, supports, couplings, corner connectors, wall brackets); user-added children are kept. <strong>Merge</strong> joins the stair body and tread plates into one mesh and all railing parts into another, with one slot per shared material.</p>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h2>
+<p><strong>Steps and Slab.</strong></p>
+<ul class="simple">
+<li><p><strong>Width</strong> along X; <strong>Riser</strong>, the rise per step; <strong>Tread</strong>, the run per step along −Y. <strong>Height Input</strong> and <strong>Length Input</strong> can instead keep the total flight height or length and derive the step sizes.</p></li>
+<li><p><strong>Riser Offset</strong> shifts each riser’s upper edge: positive values project the nose forward over a recessed, sloping riser; negative values pull it back. The riser foot, step spacing and underside stay fixed; it must be greater than −Tread.</p></li>
+<li><p><strong>Slab Height</strong> is the thickness of the sloping slab below the triangular steps, at least 1 mm, 0.2 m by default.</p></li>
+</ul>
+<p><strong>Flights and Landings.</strong></p>
+<ul class="simple">
+<li><p><strong>Flights</strong> ascend one after another, each with <strong>Steps per Flight</strong>; every extra flight adds an intermediate landing.</p></li>
+<li><p><strong>Turn Angle</strong> is 180° for parallel return flights or 90° for quarter turns, and <strong>Turn Direction</strong> is left or right while ascending.</p></li>
+<li><p><strong>Landing Depth</strong> is the landing’s depth. For 90° turns it is at least <strong>Width</strong> + <strong>Flight Gap</strong>, and the panel shows when that minimum applies.</p></li>
+<li><p><strong>Flight Gap</strong> is the clear space between neighbouring flights, at least 1 mm; on 90° turns the inner corner keeps it in both directions.</p></li>
+<li><p><strong>Side Overhang</strong> extends the exposed side edges of landings: both sides on 180° turns, the side opposite the outgoing flight on 90° turns.</p></li>
+<li><p><strong>End Overhang</strong> extends the landing’s far edge.</p></li>
+<li><p><strong>Top Landing</strong> adds a landing at the top, and <strong>Solid Base</strong> fills a single flight down to the floor.</p></li>
+</ul>
+<p><strong>Reinforcement.</strong> <strong>Side Ribs</strong> adds ribs below both side edges, with <strong>Rib Width</strong> inward from the side and <strong>Rib Z Offset</strong> downward. <strong>Cut Top</strong> continues the rib edge loops through the top polygons; without it only the rib corner stays inset.</p>
+<p><strong>Tread Finish and Bevels.</strong></p>
+<ul class="simple">
+<li><p><strong>Original Bevel</strong> keeps the structural mesh with <strong>Upper Bevel</strong>, which rounds the tread noses, and <strong>Lower Bevel</strong>, which rounds the tread/riser junctions except at the first step of each flight. Each has its own <strong>Width</strong>, <strong>Segments</strong> and <strong>Profile</strong>. Widths are clamped so bevels never overlap; one segment is a chamfer and profile 0.5 a circular section.</p></li>
+<li><p><strong>Additional Tiles / Plates</strong> makes a <strong>Tread Plates</strong> child with separate solid plates for treads and landings. <strong>Plate Thickness</strong> is recessed into the structure, so finished levels, total rise, riser spacing, the underside and railing bases stay the same; it must be smaller than the riser and slab height.</p></li>
+<li><p><strong>Plate Material</strong> is stored with the stairs.</p></li>
+<li><p><strong>Front Edge Bevel</strong>, <strong>Side Edge Bevels</strong> and <strong>Front Corner Bevels</strong> round the plates’ exposed edges, independent of the structural bevels. Rear edges against risers and landings stay square.</p></li>
+</ul>
+<p><strong>Shading.</strong> <strong>Smooth Shading</strong> (on by default) shades the faces smoothly. <strong>Mark Sharp</strong> marks the shading boundaries:</p>
+<ul class="simple">
+<li><p><strong>Sides</strong>: the outer side contours.</p></li>
+<li><p><strong>Underside / Reinforcement</strong>: the rib or slab corners along the stairs.</p></li>
+<li><p><strong>Upper End</strong>: the outline of the top end face.</p></li>
+<li><p><strong>Front / Cut Faces</strong>: the front slab, rib and cut contours. The first riser/slab joint is sharp when <strong>Riser Offset</strong> is not zero.</p></li>
+<li><p><strong>Unbeveled Corners</strong>: tread/riser corners without a bevel.</p></li>
+<li><p><strong>Landing Borders</strong>: the outer borders of landing slabs.</p></li>
+</ul>
+<p><strong>Start Cut.</strong> <strong>Cut Type</strong> is <strong>None</strong>, <strong>Floor Cut</strong>, which clips the whole mesh at Z = 0, or <strong>Box Cut</strong>, which removes slab and rib geometry below Z = 0 up to <strong>Cut Width</strong> from the origin, at most one tread. <strong>Cut Edge Flow</strong> (<strong>Box Cut</strong> only) keeps the top surface continuous with <strong>Corner</strong> or continues the cut through it with <strong>Through</strong>.</p>
+<p><strong>Railing System.</strong> <strong>Enable Railing</strong>, a railing <strong>Type</strong> (<strong>Type 1 · Tubular</strong>, <strong>Type 2 · Rectangular</strong>, <strong>Type 3 · Vertical Balusters</strong>, <strong>Type 4 · Metal Balusters</strong>) and an <strong>Inner</strong> and <strong>Outer</strong> mounting of <strong>None</strong>, <strong>Flight Mounted</strong> or <strong>Wall Mounted</strong>, each with or without landings. Every type, its dimensions, posts, ends and materials are described in <a class="reference internal" href="stairs_railings.html"><span class="std std-doc">Stair railings in detail</span></a>.</p>
+<p><strong>Vertical Offset</strong> moves the stairs, railings and collisions along local Z while the origin stays on the placement grid; the export includes it.</p>
+</section>
+<section id="axes-and-origin">
+<h2>Axes and origin<a class="headerlink" href="#axes-and-origin" title="Link to this heading">¶</a></h2>
+<p>The origin is at the start of the first flight, centred on the width, at floor level. Width runs along X and the stairs climb toward −Y with +Z up, in metres. In Godot, X is the width, +Y is up and the stairs climb toward +Z.</p>
+<p>All modules form one connected, closed shell with no internal caps between steps, slab, ribs, flights and landings; only exposed end faces exist. Every regular unbeveled step has one triangular side face above a continuous sloping slab, and cuts and bevels subdivide only the affected parts.</p>
+</section>
+<section id="uv-and-texturing">
+<h2>UV and texturing<a class="headerlink" href="#uv-and-texturing" title="Link to this heading">¶</a></h2>
+<p>Every rebuild unwraps the stair body, tread plates and railings, one atlas per material or one with <strong>One Material</strong>. The stair generator marks no seams of its own: the islands come from projection, and curved railing parts are unwrapped along them. Preview walls get no atlas.</p>
+</section>
+<section id="collisions">
+<h2>Collisions<a class="headerlink" href="#collisions" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Switch</p></th>
+<th class="head"><p>Shapes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Flight Shape</strong></p></td>
+<td><p><strong>Steps</strong> follows the step profile (a concave mesh, or one box per step with <strong>Solid Base</strong>); <strong>Ramp</strong> uses a continuous slope from the start to the top of each flight</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Include Side Ribs</strong></p></td>
+<td><p>Adds the ribs to the flight shape</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Railings</strong></p></td>
+<td><p>Boxes along the handrails and concave pieces at rounded bends and returns</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Posts</strong></p></td>
+<td><p>A box for each stair-mounted post</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Infill</strong></p></td>
+<td><p><strong>Open</strong> (none), <strong>Solid Panels</strong> along the railing, boxes or convex pieces on slopes, or <strong>Vertical Balusters</strong>, a box per bar on Type 3 and 4 railings</p></td>
+</tr>
+</tbody>
+</table>
+<p>Landings get one box each. Collision objects are named after their role, such as <code class="docutils literal notranslate"><span class="pre">FlightCollision001</span></code>, <code class="docutils literal notranslate"><span class="pre">LandingCollision001</span></code> or <code class="docutils literal notranslate"><span class="pre">HandrailCollision001</span></code>.</p>
+</section>
+<section id="export-for-godot">
+<h2>Export for Godot<a class="headerlink" href="#export-for-godot" title="Link to this heading">¶</a></h2>
+<p>The GLB holds the stair body and railing meshes as they are in the scene, with their current separation, materials and UVs; preview walls are left out. Stairs have no moving bodies, so every shape belongs to the root, under <code class="docutils literal notranslate"><span class="pre">StaticCollision</span></code> or on the root when <strong>Root Type</strong> is a body.</p>
+</section>
+<section id="export-for-substance-painter">
+<h2>Export for Substance Painter<a class="headerlink" href="#export-for-substance-painter" title="Link to this heading">¶</a></h2>
+<p>The stair body and railings are one bake group, so railings occlude the steps as they will in the game. Preview walls of wall-mounted railings are in the high file only, for ambient occlusion. With <strong>One Material</strong> the low file has one texture set, <code class="docutils literal notranslate"><span class="pre">Stairs_Paint</span></code>.</p>
+</section>
+<section id="use-in-a-game-scene">
+<h2>Use in a game scene<a class="headerlink" href="#use-in-a-game-scene" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Place the stairs by their origin at the foot of the first flight, climbing along their −Y in Blender (+Z in Godot). Use <strong>Vertical Offset</strong> to keep the origin on a placement grid.</p></li>
+<li><p>Check the imported shapes against the steps and railings, especially at landings and bends.</p></li>
+<li><p>For a smoother walk, rebuild with <strong>Flight Shape → Ramp</strong>; the visual steps stay the same.</p></li>
+</ol>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="windows.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Windows
+    </a>
+    <a class="float-right" href="stairs_railings.html" title="Next">
+        Stair Railings <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">Stairs</a><ul>
+<li><a class="reference internal" href="#creating-stairs">Creating stairs</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#axes-and-origin">Axes and origin</a></li>
+<li><a class="reference internal" href="#uv-and-texturing">UV and texturing</a></li>
+<li><a class="reference internal" href="#collisions">Collisions</a></li>
+<li><a class="reference internal" href="#export-for-godot">Export for Godot</a></li>
+<li><a class="reference internal" href="#export-for-substance-painter">Export for Substance Painter</a></li>
+<li><a class="reference internal" href="#use-in-a-game-scene">Use in a game scene</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Wagtail Sphinx Theme 6.3.0
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2026, Squeezy Pixels (Mykyta Petrenko)
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

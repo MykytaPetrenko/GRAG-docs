@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Doors &mdash; GRAG Documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e99afcfa" />
+            <link rel="author" title="About these documents" href="about.html" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="GRAG Documentation" href="#" />
+            <link rel="next" title="Windows" href="windows.html" />
+            <link rel="prev" title="Working with the Panels" href="workflow.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="https://mykytapetrenko.github.io/GRAG-docs/"
+                        title="GRAG"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/img/grag_logo.svg" width="64" height="64" alt="GRAG"
+                            class="logo-img"
+                        />
+                        GRAG
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">Working with the Panels</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generators</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Doors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs.html">Stairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs_railings.html">Stair Railings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Games and Texturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing.html">Texturing and Baking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="godot.html">Godot</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Doors</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/MykytaPetrenko/GRAG-docs/tree/main/docs/doors.md" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/doors.md.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="doors">
+<h1>Doors<a class="headerlink" href="#doors" title="Link to this heading">¶</a></h1>
+<section id="creating-doors">
+<h2>Creating doors<a class="headerlink" href="#creating-doors" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Choose the <strong>Door Style</strong>: <strong>Flush Wood</strong>, <strong>Horizontal Slats</strong>, <strong>Steel Panel</strong>, <strong>Original Four-Panel</strong> (the leaf from <code class="docutils literal notranslate"><span class="pre">door.blend</span></code>, fitted to the opening), <strong>Rounded Four-Panel</strong>, <strong>Classic Three-Panel</strong> or <strong>Modern Two-Panel</strong>. Then choose the handle and hinge side.</p></li>
+<li><p>For a standalone door, set the rough opening in <strong>Opening and Walls</strong> and press <strong>Build at Cursor</strong>. The cursor marks the centre of the opening at floor level.</p></li>
+<li><p>To place a door in a Room Builder plan, select a door opening in <strong>Rooms → Openings</strong> and press <strong>Build in Room Opening</strong>. The door takes the width, height, position, angle, finished floor level and the wall depth on both sides. After the plan changes, select the door and press <strong>Sync to Room Opening</strong>.</p></li>
+</ol>
+<p>Built-in presets: <strong>Interior Flush Door</strong>, <strong>Classic Four-Panel Door</strong>, <strong>Steel Utility Door</strong> and <strong>Glazed Double Entrance</strong>.</p>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h2>
+<p><strong>Opening and Walls.</strong> <strong>Interior Wall Depth</strong> and <strong>Exterior / Opposite Wall Depth</strong> are the distances from the plan contour to the two wall faces; between rooms the second is the neighbouring room’s wall. The backs of the casings lie on these faces, and <strong>Casing Overlap</strong> sets how far they cover the wall. <strong>Opening Bottom</strong> and <strong>Finished Floor Height</strong> are measured from the level datum. The frame and casing start from the higher of the two, and <strong>Floor Gap</strong> lifts the leaf above it. Between two rooms, the higher finished floor applies so the leaf clears both.</p>
+<p><strong>Frame and Leaf.</strong> <strong>Jamb Width</strong>, <strong>Casing Thickness</strong>, <strong>Leaf Thickness</strong> and <strong>Jamb Clearance</strong> shape the frame and leaf. When the profile leaves room behind the leaf, the jamb and the dividers get a stop rebate. <strong>Horizontal Slats</strong> use <strong>Slats</strong> and <strong>Slat Gap</strong>. In the panelled styles, <strong>Original Four-Panel</strong> and <strong>Steel Panel</strong> mark the profile breaks as sharp; <strong>Rounded Four-Panel</strong> rounds the panel corners with <strong>Panel Corner Radius</strong> and <strong>Panel Corner Segments</strong>, sharp along the profile outlines and smooth across the arcs; <strong>Classic Three-Panel</strong> has smooth profile transitions set by <strong>Bevel Width</strong> and <strong>Bevel Segments</strong>; <strong>Modern Two-Panel</strong> has a tall upper and a shorter lower panel.</p>
+<p><strong>Hardware.</strong> <strong>Handle Style</strong> offers <strong>Square Lever</strong>, <strong>Round Knob</strong>, <strong>Return Lever</strong>, <strong>Original Lever</strong> (the lever and plate from <code class="docutils literal notranslate"><span class="pre">door.blend</span></code>), <strong>Swept Lever</strong>, <strong>Blade Lever</strong>, <strong>Turned Lever</strong>, <strong>Wave Lever</strong> and <strong>None</strong>. <strong>Long Backplate</strong> extends the mounting plate in the handle’s style and adds a lock; <strong>Lock Style</strong> is <strong>Key / Key</strong>, <strong>Key / Thumbturn</strong> or <strong>Privacy</strong>, which has a thumbturn on one side and a slot for a flat screwdriver on the other. <strong>Thumbturn Side</strong> chooses the thumbturn’s side. <strong>Handle Height</strong>, <strong>Hardware Finish</strong> and <strong>Hinges</strong> complete the hardware.</p>
+<p><strong>Opening Layout.</strong> <strong>Double Leaf</strong> adds a second leaf; <strong>Secondary Bay Width</strong> is its share of the door bay after the frame and gaps. Each leaf has its own pivot and <strong>Swing</strong> angle, a preview only. <strong>Secondary Handle</strong> adds a handle to the second leaf; by default it is passive and carries the strike plate for the main leaf’s latch. <strong>Left Section</strong>, <strong>Right Section</strong> and <strong>Transom</strong> can be <strong>Solid</strong> panels or <strong>Glazed</strong> frames. Side section widths come out of the opening width: a 2 m opening with two 0.5 m sections leaves a 1 m door bay. The transom spans the whole width and its height comes out of the opening height. <strong>Divider Width</strong> and <strong>Divider Depth</strong> size the dividers. Each glazed section has its own <strong>Glass Frame Width</strong>; <strong>Left Bottom Offset</strong> and <strong>Right Bottom Offset</strong> raise the glass and fill the bottom with a solid panel; <strong>Transom Columns</strong> splits the transom into equal parts. Each section is <strong>Simple</strong> (a plain panel or glazed frame) or <strong>Match Door</strong>, which aligns slat joints, panels and recesses with the main leaf. A solid transom has vertical slats, as many as its width fits at the leaf’s slat spacing; a panelled one has one row of rectangular panels.</p>
+<p><strong>Mesh Detail.</strong> <strong>Cylinder Sides</strong>, <strong>Segments per Handle Bend</strong>, <strong>Bevel Width</strong> and <strong>Bevel Segments</strong> (0 turns procedural bevels off). The reference leaf and handle keep their topology, UVs and sharp edges. The panel shows the face count.</p>
+</section>
+<section id="axes-and-origin">
+<h2>Axes and origin<a class="headerlink" href="#axes-and-origin" title="Link to this heading">¶</a></h2>
+<p>The origin is the centre of the rough opening at floor level, on the wall’s plan contour. X runs along the wall, +Y points into the room and +Z up, in metres. <strong>Hinge Side</strong> is seen looking toward +Y. Each leaf turns around its <strong>Door Hinge Pivot</strong> empty; the handles turn around their spindles, stored in <code class="docutils literal notranslate"><span class="pre">grag_handle_origin</span></code>. In Godot, +Y is up and the room side is −Z.</p>
+</section>
+<section id="uv-and-texturing">
+<h2>UV and texturing<a class="headerlink" href="#uv-and-texturing" title="Link to this heading">¶</a></h2>
+<p>The generator marks seams on the diagonal joints of the frame, casings and glass frames, between rails, stiles and panels, and the grain direction of each wooden face. <strong>Texture Grain</strong> chooses whether wood grain runs along <strong>Horizontal (U)</strong> or <strong>Vertical (V)</strong> in the texture; the atlas keeps the islands’ rotation so the grain stays aligned. In <strong>Original Four-Panel</strong> and <strong>Rounded Four-Panel</strong> the centre stile has two islands on each face and every rail is one island from stile to stile. The authored UVs of the reference leaf stay as <strong>ReferenceUV</strong>.</p>
+<p><strong>Bake Groups</strong> choose which parts bake together:</p>
+<ul class="simple">
+<li><p><strong>Bake Hinges</strong>: <strong>With Frame and Leaves</strong> (default) keeps each moving hinge plate with its leaf and the pins and fixed plates with the frame; <strong>Separate</strong> moves every hinge part apart.</p></li>
+<li><p><strong>Bake Handle</strong>: <strong>With Backplate</strong> (default) keeps the grip, backplate and lock together, apart from the leaf; <strong>With Backplate and Leaf</strong> bakes them in place on their leaf; <strong>Separate</strong> moves each one apart.</p></li>
+<li><p><strong>Bake Latch</strong>: <strong>Separate</strong> (default) moves the latch and strike plate apart; <strong>With Frame and Leaves</strong> keeps the latch with its leaf and the strike plate with the part it is mounted on, the frame or, in a double door, the second leaf.</p></li>
+</ul>
+<p>Doors have no helper geometry for ambient occlusion.</p>
+</section>
+<section id="collisions">
+<h2>Collisions<a class="headerlink" href="#collisions" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Part</p></th>
+<th class="head"><p>Switch</p></th>
+<th class="head"><p>Shapes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Frame</p></td>
+<td><p><strong>Frame</strong>, on</p></td>
+<td><p>Three boxes through the wall depth (<code class="docutils literal notranslate"><span class="pre">JambLeft</span></code>, <code class="docutils literal notranslate"><span class="pre">JambRight</span></code>, <code class="docutils literal notranslate"><span class="pre">JambHead</span></code>) and three narrow stop boxes behind the leaf (<code class="docutils literal notranslate"><span class="pre">JambStop…</span></code>). There are no stops when the leaf leaves no room behind it.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Side sections and transom</p></td>
+<td><p><strong>Fixed Sections</strong>, on</p></td>
+<td><p>Boxes for each divider, its stop and its infill at leaf depth (<code class="docutils literal notranslate"><span class="pre">LeftDivider…</span></code>, <code class="docutils literal notranslate"><span class="pre">LeftSection…</span></code>, <code class="docutils literal notranslate"><span class="pre">TopSection…</span></code>). Glazed infills have collisions too.</p></td>
+</tr>
+<tr class="row-even"><td><p>Leaves</p></td>
+<td><p><strong>Leaves</strong>, on</p></td>
+<td><p>One box per leaf (<code class="docutils literal notranslate"><span class="pre">PrimaryLeafCollision</span></code>, <code class="docutils literal notranslate"><span class="pre">SecondaryLeafCollision</span></code>) in its pivot’s space. It matches the closed leaf and turns with it.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Casings</p></td>
+<td><p><strong>Casing</strong>, off</p></td>
+<td><p>Three thin boxes on each wall face (<code class="docutils literal notranslate"><span class="pre">InsideCasing…</span></code>, <code class="docutils literal notranslate"><span class="pre">OutsideCasing…</span></code>).</p></td>
+</tr>
+</tbody>
+</table>
+<p>All shapes are boxes. Handles, hinges, the latch and the strike plate have no collisions. The gaps around the leaf stay open, so a leaf swings from closed to 90° without touching the frame, sections or casings. Without <strong>Generate Collisions</strong> the manifest still has the leaf bodies and their motion, but no shapes.</p>
+</section>
+<section id="export-for-godot">
+<h2>Export for Godot<a class="headerlink" href="#export-for-godot" title="Link to this heading">¶</a></h2>
+<p>With <strong>Merge</strong>, the scene and the GLB hold these meshes:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mesh</p></th>
+<th class="head"><p>Parent</p></th>
+<th class="head"><p>Parts</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DoorMesh</span></code></p></td>
+<td><p>Door root</p></td>
+<td><p>Frame, casings, dividers, side sections, transom, fixed hinge parts and pins, strike plate (on the second leaf in a double door)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">PrimaryLeafPivotMesh</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Door</span> <span class="pre">Hinge</span> <span class="pre">Pivot</span></code></p></td>
+<td><p>Leaf, moving hinge plates, latch, backplates, lock</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PrimaryHandlePivotMesh</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Door</span> <span class="pre">Hinge</span> <span class="pre">Pivot</span></code></p></td>
+<td><p>Handles, turning around the spindle in <code class="docutils literal notranslate"><span class="pre">grag_handle_origin</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SecondaryLeafPivotMesh</span></code>, <code class="docutils literal notranslate"><span class="pre">SecondaryHandlePivotMesh</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Secondary</span> <span class="pre">Door</span> <span class="pre">Hinge</span> <span class="pre">Pivot</span></code></p></td>
+<td><p>The same for the second leaf</p></td>
+</tr>
+</tbody>
+</table>
+<p>The GLB has an empty for each leaf pivot (<code class="docutils literal notranslate"><span class="pre">PrimaryLeafPivot</span></code>, <code class="docutils literal notranslate"><span class="pre">SecondaryLeafPivot</span></code>) and each handle pivot (<code class="docutils literal notranslate"><span class="pre">PrimaryHandlePivot</span></code>, <code class="docutils literal notranslate"><span class="pre">SecondaryHandlePivot</span></code>); handles turn around their local −Z. <strong>One Material</strong> also writes one material to the GLB. Imported in Godot:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Door                         Node3D, or StaticBody3D with Root Type
+├── DoorMesh                 MeshInstance3D of the fixed parts (with Merge)
+├── StaticCollision          StaticBody3D for the fixed shapes
+│   ├── JambLeftCollision    CollisionShape3D
+│   ├── JambRightCollision
+│   ├── JambHeadCollision
+│   └── JambStopLeftCollision …
+└── PrimaryLeafPivot         AnimatableBody3D on the hinge axis
+    ├── PrimaryLeafPivotMesh
+    ├── PrimaryHandlePivot
+    └── PrimaryLeafCollision
+</pre></div>
+</div>
+<p>Each leaf’s <code class="docutils literal notranslate"><span class="pre">grag_motion</span></code> has <code class="docutils literal notranslate"><span class="pre">type</span></code> <code class="docutils literal notranslate"><span class="pre">hinge</span></code>, the local <code class="docutils literal notranslate"><span class="pre">axis</span></code> <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">0]</span></code>, <code class="docutils literal notranslate"><span class="pre">closed_degrees</span></code> <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">open_degrees</span></code> ±90°, signed toward the room.</p>
+</section>
+<section id="export-for-substance-painter">
+<h2>Export for Substance Painter<a class="headerlink" href="#export-for-substance-painter" title="Link to this heading">¶</a></h2>
+<p>Every part is its own mesh in both files, even when the scene is merged, and the bake groups above are moved apart along X. With <strong>One Material</strong> the low file has one texture set, <code class="docutils literal notranslate"><span class="pre">Door_Paint</span></code>.</p>
+</section>
+<section id="use-in-a-game-scene">
+<h2>Use in a game scene<a class="headerlink" href="#use-in-a-game-scene" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Place the door at the centre of the opening at floor level, with +Y toward the room. For another opening size, generate a matching door in Blender.</p></li>
+<li><p>Check the imported tree and collisions: the closed leaf fills the opening and swings to its limit without touching the frame.</p></li>
+<li><p>Drive the leaf body found by <code class="docutils literal notranslate"><span class="pre">grag_body_id</span></code> between <code class="docutils literal notranslate"><span class="pre">closed_degrees</span></code> and <code class="docutils literal notranslate"><span class="pre">open_degrees</span></code> around <code class="docutils literal notranslate"><span class="pre">axis</span></code>. For force-driven motion, replace the body with a <code class="docutils literal notranslate"><span class="pre">RigidBody3D</span></code> and pin it with a <code class="docutils literal notranslate"><span class="pre">HingeJoint3D</span></code> on the hinge axis. <a class="reference external" href="https://docs.godotengine.org/en/stable/classes/class_hingejoint3d.html">HingeJoint3D</a></p></li>
+</ol>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="workflow.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Working with the Panels
+    </a>
+    <a class="float-right" href="windows.html" title="Next">
+        Windows <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">Doors</a><ul>
+<li><a class="reference internal" href="#creating-doors">Creating doors</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#axes-and-origin">Axes and origin</a></li>
+<li><a class="reference internal" href="#uv-and-texturing">UV and texturing</a></li>
+<li><a class="reference internal" href="#collisions">Collisions</a></li>
+<li><a class="reference internal" href="#export-for-godot">Export for Godot</a></li>
+<li><a class="reference internal" href="#export-for-substance-painter">Export for Substance Painter</a></li>
+<li><a class="reference internal" href="#use-in-a-game-scene">Use in a game scene</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Wagtail Sphinx Theme 6.3.0
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2026, Squeezy Pixels (Mykyta Petrenko)
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Texturing and Baking &mdash; GRAG Documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e99afcfa" />
+            <link rel="author" title="About these documents" href="about.html" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="GRAG Documentation" href="#" />
+            <link rel="next" title="Godot" href="godot.html" />
+            <link rel="prev" title="Collisions" href="collisions.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="https://mykytapetrenko.github.io/GRAG-docs/"
+                        title="GRAG"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/img/grag_logo.svg" width="64" height="64" alt="GRAG"
+                            class="logo-img"
+                        />
+                        GRAG
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">Working with the Panels</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generators</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="doors.html">Doors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs.html">Stairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stairs_railings.html">Stair Railings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Games and Texturing</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Texturing and Baking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="godot.html">Godot</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Texturing and Baking</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/MykytaPetrenko/GRAG-docs/tree/main/docs/texturing.md" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/texturing.md.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="texturing-and-baking">
+<h1>Texturing and Baking<a class="headerlink" href="#texturing-and-baking" title="Link to this heading">¶</a></h1>
+<p>The <strong>Texturing and Baking</strong> section is the same in every panel:</p>
+<ul class="simple">
+<li><p><strong>One Material</strong> packs every paintable part into one atlas and one texture set. Without it, each material gets its own atlas. Material assignments in the scene are kept either way.</p></li>
+<li><p>Options of the generator, such as the door’s <strong>Texture Grain</strong> and bake groups.</p></li>
+<li><p><strong>Prepare Draft UVs</strong> unwraps the current meshes again, keeping their geometry and hand edits. Use it after editing a mesh or changing material assignments.</p></li>
+<li><p><strong>Export for Substance Painter</strong>.</p></li>
+</ul>
+<p>Every <strong>Rebuild</strong> unwraps a draft atlas into the <code class="docutils literal notranslate"><span class="pre">UVMap</span></code> layer. The generator marks seams where it knows them, for example on mitred joints and profiled frames, and the grain direction of wooden parts; a shared UV service unwraps the faces of each texture set, scales the islands evenly, turns wood grain along the chosen texture axis and packs the atlas. Faces without generator seams get their islands by projection. Glass and window reveals keep tiled UVs and stay out of the atlas. Other UV layers, such as an authored one, are kept. Refine the unwrap by hand after the last rebuild or draft.</p>
+<p><strong>Export for Substance Painter</strong> writes <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;_low.obj</span></code> to paint and <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;_high.obj</span></code> to bake Material ID and ambient occlusion, each with its <code class="docutils literal notranslate"><span class="pre">.mtl</span></code>. Both files hold the same meshes with <code class="docutils literal notranslate"><span class="pre">_low</span></code> and <code class="docutils literal notranslate"><span class="pre">_high</span></code> suffixes, so Painter can match them by mesh name. In the low file each material is a texture set, or there is one with <strong>One Material</strong>. In the high file each source material has its own colour for the ID map. The export uses the closed pose. Parts in different bake groups are moved apart along X by 0.5 m so they do not occlude each other, and helper geometry that only adds ambient occlusion is in the high file only. In Painter:</p>
+<ol class="arabic simple">
+<li><p>Create the project from <code class="docutils literal notranslate"><span class="pre">_low.obj</span></code>. Keep each OBJ next to its MTL. <a class="reference external" href="https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/getting-started/project-creation">Painter project creation</a></p></li>
+<li><p>In <strong>Bake Mesh Maps</strong>, add <code class="docutils literal notranslate"><span class="pre">_high.obj</span></code> to <strong>High Definition Meshes</strong> and set <strong>Match → By Mesh Name</strong> with the <code class="docutils literal notranslate"><span class="pre">_low</span></code> and <code class="docutils literal notranslate"><span class="pre">_high</span></code> suffixes. For the <strong>ID</strong> map, set <strong>Color Source → Material Color</strong>. <a class="reference external" href="https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/baking/mesh-map-settings">Mesh map settings</a> · <a class="reference external" href="https://experienceleague.adobe.com/en/docs/substance-3d/bakers/features/matching-by-name">Matching by name</a></p></li>
+<li><p>For <strong>Ambient Occlusion</strong>, set <strong>Self Occlusion → Always</strong> so helper geometry occludes the paintable parts. For local occlusion, turn off <strong>Relative to Bounding Box</strong> and start with <strong>Max Occluder Distance</strong> 0.35 m. <a class="reference external" href="https://experienceleague.adobe.com/en/docs/substance-3d/bakers/bakers-settings/ambient-occlusion-from-mesh">AO settings</a></p></li>
+</ol>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="collisions.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Collisions
+    </a>
+    <a class="float-right" href="godot.html" title="Next">
+        Godot <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Wagtail Sphinx Theme 6.3.0
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2026, Squeezy Pixels (Mykyta Petrenko)
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>
